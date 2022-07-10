@@ -262,8 +262,8 @@ $('.navbar-start').load($(this).attr("href") +' .navbar-start');
   return false;
 });
 $(document).ready(function(){
-$('input#video[type="submit"]').click(function(e) {
-  let video = $('input[name="video"]').val();
+$('input#url[type="submit"]').click(function(e) {
+  let video = $('input[name="url"]').val();
 
   if(video == null || video == '' ){
     alert ('URLを入力してください。')
@@ -278,19 +278,6 @@ $('input#video[type="submit"]').click(function(e) {
   $('#loading').css('font-size','2em');
     $('#loading').fadeIn();
     $('form#video').submit();
-});
-});
-$(document).ready(function(){
-$('input#audio[type="submit"]').click(function(e) {
-  let audio = $('input[name="audio"]').val();
-
-  if(audio == null || audio == '' ){
-    alert ('URLを入力してください。')
-  return false
-  }
-  $('#loading').show();
-    $('#loading').fadeIn();
-    $('form#audio').submit();
 });
 });
 jQuery(function($){

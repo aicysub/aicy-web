@@ -40,16 +40,15 @@ if(!isset($_GET['i'])){
   ';
 exit;
 }else{
-ini_set('display_errors', "On");
     $file = "/hdd/aic/tools/files/" . $_GET['i'] . ".webm";
     $wav_file = "/hdd/aic/tools/files/" . $_GET['i'] . ".wav";
   $mp3_file = "/hdd/aic/tools/files/" . $_GET['i'] . ".mp3";
   $dirfilename = "/tools/files/" . $_GET['i'] . ".mp3";
   $filename = $_GET['name'].".mp3";
   $wav_command = "ffmpeg -i ".$file." -b:a 256k ".$wav_file."";
-  escapeshellcmd($wav_command);
+  exec($wav_command);
   $command = "lame --vbr-new -V0 -b256 -F -f -m s --notemp --nores --interch 1 -p -k ".$wav_file." ".$mp3_file."";
-  escapeshellcmd($command);
+  exec($command);
   $size = filesize($mp3_file);
   function byte_format($size, $dec=-1, $separate=false){
     $units = array('B', 'KB', 'MB', 'GB', 'TB', 'PB');

@@ -49,7 +49,7 @@ exit;
   $dirfilename = "/tools/files/" . $_GET['i'] . ".mp3";
   $filename = $_GET['name'].".mp3";
   $command = "lame --vbr-new -V0 -b256 -F -f -m s --notemp --nores --interch 1 -p -k ".$file." ".$mp3_file."";
-  escapeshellcmd($command);
+  exec($command);
   $size = filesize($mp3_file);
   function byte_format($size, $dec=-1, $separate=false){
     $units = array('B', 'KB', 'MB', 'GB', 'TB', 'PB');
@@ -72,7 +72,6 @@ exit;
      
     return ($over) ? $num . $units[$max_digit] : $num . $units[$digits];
 }
-require("/hdd/aic/head.php");
   echo '<script>$(document).on(\'click\', \'#link-none\', function(){
     var downloadUrl = "'.$dirfilename.'";
     var downloading = browser.downloads.download({
