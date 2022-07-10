@@ -41,12 +41,7 @@ ob_start();
 <div class="box">
     <h3 class="h3">現在開催中のイベント</h3>
     <div class="event">
-        <h2 class="h2">話せ。6月だ</h2><br>
-        <p style="text-align: center;"><a href="https://discord.gg/H5YR5tkNc9" target="_blank">あいしぃーのさーばー</a>にて<br><br><h3 class="h3">内容</h3><br>
-        
-        話せ VIPperになれるぞ</p></p>    <hr class="hr">
-        <p class="title">主催</p>
-        <?php include('/hdd/aic/owner/aicy/card.php');?>
+<p style="text-align:center">現在はありません。</p>
 </div></div>
     <hr class="hr">
     <div class="box">
