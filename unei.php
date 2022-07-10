@@ -35,7 +35,7 @@ include('/hdd/aic/admin/ginzyou-genryu/ginzyou-genryu.php');
 </div>
 <div class="flex admin-more">
 <?php
-include('/hdd/aic/admin/kumi/kumi.php');
+include('/hdd/aic/admin/mahuyu/mahuyu.php');
 ?>
 <?php
 include('/hdd/aic/admin/chasyumen/chasyumen.php');

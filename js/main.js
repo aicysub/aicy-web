@@ -91,9 +91,6 @@ function lazyLoadScript(scriptSrc) {
     }
 }
 $(function(){
-  $("a[href='"+location.pathname+"']").removeAttr('href');
-});
-$(function(){
   $("a[href^='#']").click(function(){
   var $parent = $(this).closest('.container');
   var $index = $("button", $parent).index(this);
@@ -219,6 +216,8 @@ $("nav-item").click(function () {
   $("nav-menu").removeClass("is-active");
 });
 $(document).on('click', 'a[href^="/"]', function(){
+  $('link[href^="/owner/aicy/birthday.css"]').remove();
+  $('script[src^="/owner/aicy/birthday.js"]').remove();
   $('.hide').css('pointer-events','none');
   $('.h2,.box,.bread,.unei,.name-list').fadeOut(500);
   $('#modals').fadeIn();
@@ -234,11 +233,8 @@ $(document).on('click', 'a[href^="/"]', function(){
       $('#loadings').css('font-size','0px');
       $('#loadings').css('display','none');
     },1200);
-setTimeout(function(){
-  window.scroll({top: 0, behavior: 'smooth'});
-},100);
 $('.contents').load($(this).attr("href") +' .contents');
-$('.navbar-start').load($(this).attr("href") +' .navbar-start');
+$('#setup').load($(this).attr("href") +' #setup');
   var nextPage = $(this).attr('href');
   history.pushState(null, null, nextPage);
   setTimeout(function(){
@@ -255,8 +251,8 @@ $('.navbar-start').load($(this).attr("href") +' .navbar-start');
       $('#loadings').fadeOut();
       $('#loadings').css('display','none');
     },100);
-      $("a[href='"+location.pathname+"']").removeAttr('href');
   });
+  window.scroll({top: 0, behavior: 'smooth'});
 },1000);
 },600);
   return false;
@@ -719,51 +715,6 @@ function first_white_click() {
       );
       }
   );
-  $('#admin').hover(
-    function() {
-      $('#etc-nav').fadeOut(600);
-      $('#events-nav').fadeOut(600);
-      $('#admin-nav').fadeIn(600);
-  },
-  function() {
-    $('#admin-nav').hover(
-      function() {
-        $('#admin-nav').css('display','block');
-    },
-    function() {
-      $('#admin-nav').fadeOut(600);
-    }
-  );
-  }
-);
-$('#etc').hover(
-  function() {
-    $('#admin-nav').fadeOut(600);
-    $('#events-nav').fadeOut(600);
-    $('#etc-nav').fadeIn(600);
-},
-function() {
-  $('#etc-nav').hover(
-    function() {
-      $('#etc-nav').css('display','block');
-  },
-  function() {
-    $('#etc-nav').fadeOut(600);
-  }
-);
-}
-);
-$('.hide').hover(
-  function() {
-    $('#admin-nav').fadeOut(600);
-    $('#etc-nav').fadeOut(600);
-    $('#events-nav').fadeOut(600);
-},
-function() {
-  $('#admin-nav').fadeOut(600);
-  $('#etc-nav').fadeOut(600);
-  $('#events-nav').fadeOut(600);
-});
 function anime_true_click() {
   document.cookie = 'anime=; max-age=0; path=/;'; 
   loadCSS( '/css/anime.css', document.getElementById('loadcss') );
@@ -788,3 +739,48 @@ function anime_false_click() {
     $('#saved').css('opacity','0');
   },3000); 
 }
+$('#admin').hover(
+  function() {
+    $('#etc-nav').fadeOut(600);
+    $('#events-nav').fadeOut(600);
+    $('#admin-nav').fadeIn(600);
+},
+function() {
+  $('#admin-nav').hover(
+    function() {
+      $('#admin-nav').css('display','block');
+  },
+  function() {
+    $('#admin-nav').fadeOut(600);
+  }
+);
+}
+);
+$('#etc').hover(
+function() {
+  $('#admin-nav').fadeOut(600);
+  $('#events-nav').fadeOut(600);
+  $('#etc-nav').fadeIn(600);
+},
+function() {
+$('#etc-nav').hover(
+  function() {
+    $('#etc-nav').css('display','block');
+},
+function() {
+  $('#etc-nav').fadeOut(600);
+}
+);
+}
+);
+$('.hide').hover(
+function() {
+  $('#admin-nav').fadeOut(600);
+  $('#etc-nav').fadeOut(600);
+  $('#events-nav').fadeOut(600);
+},
+function() {
+$('#admin-nav').fadeOut(600);
+$('#etc-nav').fadeOut(600);
+$('#events-nav').fadeOut(600);
+});

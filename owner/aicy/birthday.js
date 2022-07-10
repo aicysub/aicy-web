@@ -16,7 +16,6 @@ function admin_more() {
     $('.h2').fadeIn(3800);
 };
 $(document).on('click', 'a[href^="/"]', function(){
-    location.href.reload;
     $('link[href^="/owner/aicy/birthday.css"]').remove();
     $('link[href^="/owner/aicy/birthday.js"]').remove();
 });

@@ -15,7 +15,6 @@ ob_start();
     color: var(--main-text);
     transform: scale(1.05);
     margin-right: 20px;
-    pointer-events: none;
   }
   #top i {
     color: var(--main-text);
