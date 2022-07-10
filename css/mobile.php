@@ -295,6 +295,13 @@ $original_css = '@keyframes scroll {
   #link-true {
     margin-left: 0px;
   }
+  .input-search {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    margin-top: 5px;
+    margin-right: 0px;
+  }
 ';
 if(!isset($_GET['original'])){
     $css_replaces = [];

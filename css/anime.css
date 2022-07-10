@@ -148,7 +148,7 @@
 .top,.top:hover {
     transition: all .5s ease;
 }
-.navbar,.bread {
+.navbar,.bread,.fixed {
   transition: .5s ease;
 }
 #anime-change {

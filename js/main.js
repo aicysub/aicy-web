@@ -648,10 +648,12 @@ function first_white_click() {
               var navcp = $(this).scrollTop();
               if (navlp < navcp) {
                 $sticky.css('top', '-200px');
-                $('.bread').css('top','40px')
+                $('.bread').css('top','40px');
+                $('.fixed').css('top','20px');
               } else if (navlp > navcp) {
                 $sticky.css('top', '0');
-                $('.bread').css('top','100px')
+                $('.fixed').css('top','80px');
+                $('.bread').css('top','100px');
               }
               navlp = navcp;
             });

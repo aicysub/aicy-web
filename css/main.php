@@ -745,10 +745,10 @@ a:hover span {
   box-shadow: var(--shadow);
   border-radius: 18px;
   background: #f8f8f8;
-  padding-top: 0.8%;
-  padding-bottom: .8%;
-  padding-left: 4%;
-  padding-right: 4%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 25px;
+  padding-right: 25px;
   box-lines: none;
   outline: none;
   border: 2px solid var(--accent);
@@ -1974,6 +1974,8 @@ label {
 
 #preference-modal-open {
   transition: 2s;
+  z-index: 5000;
+margin-right: 10px;
 }
 
 #anime-config,
@@ -2049,7 +2051,41 @@ display: none;
   color: #f4be9b;
   font-size: 3em;
 }
-';
+.search {
+  margin-left: 20%;
+  margin-right: 20%;
+  background: var(--background-secondary);
+  padding-top: 30px;
+  padding-left: 50px;
+  padding-bottom: 30px;
+  font-size: 1.5em;
+  border-radius: 5000px;
+  text-align: center;
+  padding-right: 50px;
+  box-shadow: var(--shadow);
+  border: var(--border);
+}
+.search hr {
+  background-color: var(--border-color);
+  margin: auto;
+  height: 1px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.fixed {
+  position: sticky;
+  top: 80px;
+  z-index: 500;
+  background: var(--nav-background);
+  backdrop-filter: saturate(180%) blur(20px);
+}
+.input-search {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  margin-right: 10px;
+}
+  ';
 if(!isset($_GET['original'])){
   $css_replaces = [];
   $css_replaces[ '/@charset \"(utf|UTF)-8\";/' ] = '';

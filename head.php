@@ -133,8 +133,8 @@ header_register_callback(function(){
       <a id="preference-modal-open" onclick="config()">
       <div class="change" id="pc">
       <i class="fa-solid fa-gear" id="config"></i>
-</div>
-</a>
+</div></a>
+<?php require_once("/hdd/aic/input.php"); ?>
       </nav>
       <footer class="footers">
 <h2 class="title" style="text-align: center; padding-bottom: 10px; color: #FFF; text-shadow: 1px 1px 0 #906862, -1px -1px 0 #906862, -1px 1px 0 #906862, 1px -1px 0 #906862, 0px 1px 0 #906862, 0-1px 0 #906862, -1px 0 0 #906862, 1px 0 0 #906862;width: 100%;font-size: 1.5em;"><i class="fa-solid fa-copyright" style="color: #FFF;"></i>AIC_Group. / <a href="/owner/aicy/" class="none" id="aicy-footer"><img src="/favicon.ico" width="30"></a> 2022 -</h2><p class="color" style="text-align:center; font-size: 15px; font-weight: normal; margin-top: 1%;">現在ダークモードで表示しています</p><p class="white" style="text-align:center;font-size: 15px; font-weight: normal; margin-top: 1%;">現在ホワイトモードで表示しています</p><p style="text-align: center; font-size: 15px; font-weight: normal; " title="メニューの最終更新日" alt="メニューの最終更新日"></p><p style="text-align:center;"><i class="fa-solid fa-clock-rotate-left"></i> <?php date_default_timezone_set('asia/tokyo'); clearstatcache(); echo date( "Y/m/d H:i", filemtime(__FILE__)); ?></p></p>
