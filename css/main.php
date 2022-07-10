@@ -51,6 +51,7 @@ body {
   --modal: #F6F6F6;
   --site-background: #F6F6F6;
   --nav-background: #ffffff8c;
+  --button-background: #FFF;
 }
 
 .name-list {
@@ -1816,17 +1817,17 @@ label {
 
 .preference-submit {
   background: var(--accent);
-  display: inline;
   padding-top: 10px;
-  padding-bottom: 11px;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-bottom: 10px;
+  padding-left: 25px;
+  padding-right: 25px;
   border-radius: 5000px;
-  color: #fff;
+  display: inline;
   cursor: pointer;
-  border: 3px solid transparent;
   user-select: none;
+  border: 3px solid var(--accent);
   box-shadow: var(--shadow);
+  color: #fff;
 }
 
 .preference-submit:hover {
@@ -1888,13 +1889,24 @@ label {
 }
 
 .preference-etc {
-  margin-right: 2%;
-  padding-bottom: 1px;
+  background: var(--button-background);
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 5000px;
+  display: inline;
+  margin-right: 10px;
   cursor: pointer;
+  user-select: none;
+  box-shadow: var(--shadow);
+  border: 3px solid var(--button-background);
 }
 
 .preference-etc:hover {
-  color: var(--opacity-color);
+  background: var(--accent);
+  border: 3px solid var(--accent);
+  color: #fff;
 }
 
 .preference-main {

@@ -13,6 +13,7 @@ $original_css = ':root {
     --nav-focus: #D4D4D47A;
     --site-background: #2f2f2f;
     --nav-background: rgba(0, 0, 0, 0) linear-gradient(to right, rgba(252, 92, 125, 0.57), rgba(106, 130, 251, 0.59)) repeat scroll 0% 0%;
+    --button-background: linear-gradient(to right, #fc466b, #3f5efb);
   }
   
   .h2 {

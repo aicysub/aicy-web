@@ -5,6 +5,7 @@ include("/hdd/aic/head.php");
 <script src="/owner/aicy/birthday.js"></script>
 <script>
     $(document).ready(function(){
+loadCSS( "/css/dark/<?php echo $css_v?>", document.getElementById("loadcss") );
 loadCSS( "/css/special/<?php echo $css_v?>", document.getElementById("loadcss") );
 setTimeout(function(){loadCSS( "/owner/aicy/birthday.css<?php echo $css_v?>", document.getElementById("loadcss") );
     aicy_anime();

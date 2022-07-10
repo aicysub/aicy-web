@@ -158,7 +158,10 @@ echo '
 ';
 echo '<script>';
 echo 'setTimeout(function(){loadCSS( "/css/main/'.$main_css_v.'", document.getElementById("loadcss") );},500);';
-echo 'setTimeout(function(){loadCSS( "/css/anime.css'.$main_css_v.'", document.getElementById("loadcss") );},500);';
+if (isset($_COOKIE['anime'])){
+} else{
+  echo 'setTimeout(function(){loadCSS( "/css/anime.css'.$main_css_v.'", document.getElementById("loadcss") );},500);';
+}
 if (strstr($ua, 'Trident') || strstr($ua, 'MSIE')) {
   header('Location: https://aic-group.sytes.net/ie/?p='.$_SERVER['REQUEST_URI'].'');
 }

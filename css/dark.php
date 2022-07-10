@@ -16,6 +16,7 @@ $original_css = ':root {
    --modal: #222224;
    --site-background: #222224;
    --nav-background: #1c1e204a;
+   --button-background: #515254;
  }
  
  html {

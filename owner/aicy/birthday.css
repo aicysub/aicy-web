@@ -12,7 +12,7 @@ margin-top: 30px;
     background: rgba(0, 0, 0, 0) linear-gradient(to right, rgb(252, 92, 125), rgb(106, 130, 251)) repeat scroll 0% 0%;
     box-shadow: var(--shadow);
 }
-.birthday-subtext {
+.birthday-subtext,.h2 {
     display: none;
     font-size: 1.5em;
     font-family: HeadingFonts;

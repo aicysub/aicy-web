@@ -17,9 +17,9 @@
 <div class="preference-contents">
 <div class="preference-main" id="preference-list">
   <p>テーマ設定など、すべての設定が含まれます</p>
-        <div id="preference-setup-modal-end" style="display: flex;justify-content: flex-end;align-items: center;padding-bottom: 15px;padding-left: 20px;padding-right: 20px;" class="">
+        <div id="preference-setup-modal-end" style="display: flex;justify-content: flex-end;align-items: center;padding-bottom: 15px;">
     
-        <p class="preference-etc" onclick="exit_setup()">いいえ</p> <p class="preference-submit" onclick="exit_modal_setup()">はい</p>
+        <p class="preference-submit" onclick="exit_modal_setup()" style="margin-right: 10px;">はい</p> <p class="preference-etc" onclick="exit_setup()" style="margin-right: 0px;">いいえ</p> 
   </div>
     
 </div>
