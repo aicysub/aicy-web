@@ -683,8 +683,8 @@ function first_white_click() {
           $('#preference-end').fadeOut(1000);
           setTimeout(function(){
              $('#anime-config').fadeIn(1000);
-             $('#anime-config-end').fadeIn(1000);
-             $('#anime-config-end').css('display','flex');    
+             $('#preference-anime-end').fadeIn(1000);
+             $('#preference-anime-end').css('display','flex');    
                    $('.preference-title').text('アニメーション設定')},
                    999);
           };
@@ -764,3 +764,27 @@ function() {
   $('#etc-nav').fadeOut(600);
   $('#events-nav').fadeOut(600);
 });
+function anime_true_click() {
+  document.cookie = 'anime=; max-age=0; path=/;'; 
+  loadCSS( '/css/anime.css', document.getElementById('loadcss') );
+  $('#anime_true_video').addClass('preference-img-selected');
+  $('#anime_false_video').removeClass('preference-img-selected');
+  setTimeout(function(){
+    $('#saved').css('opacity','1');
+  },400);
+  setTimeout(function(){
+    $('#saved').css('opacity','0');
+  },3000); 
+}
+function anime_false_click() {
+  document.cookie = 'anime=false; path=/; expires=Fri, 31-Dec-2038 23:59:59 JST;'; 
+  $('link[href^="/css/anime.css"]').remove();
+  $('#anime_false_video').addClass('preference-img-selected');
+  $('#anime_true_video').removeClass('preference-img-selected');
+  setTimeout(function(){
+    $('#saved').css('opacity','1');
+  },400);
+  setTimeout(function(){
+    $('#saved').css('opacity','0');
+  },3000); 
+}

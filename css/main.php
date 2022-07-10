@@ -1778,7 +1778,9 @@ label {
 
 #white,
 #dark,
-#special {
+#special,
+#anime-true,
+#anime-false {
   transform: scale(1.5);
   margin-left: 3%;
   margin-right: 2%;
@@ -1801,7 +1803,7 @@ label {
   margin-right: 20px;
 }
 
-.preference-img img {
+.preference-img img,.preference-img video {
   border-radius: 18px;
   cursor: pointer;
   box-shadow: var(--shadow);
@@ -1964,7 +1966,8 @@ label {
 
 #anime-config,
 #preference-themes,
-#preference-themes-end {
+#preference-themes-end,
+#preference-anime-end {
   display: none;
 }
 
@@ -2029,6 +2032,10 @@ label {
 }
 .navbar-item.is-active .navbar-dropdown, .navbar-item.is-hoverable:focus .navbar-dropdown, .navbar-item.is-hoverable:focus-within .navbar-dropdown, .navbar-item.is-hoverable:hover .navbar-dropdown {
 display: none;
+}
+.fa-solid.fa-face-thinking {
+  color: #f4be9b;
+  font-size: 3em;
 }
 ';
 if(!isset($_GET['original'])){

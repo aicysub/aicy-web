@@ -48,7 +48,7 @@ ob_start();
 <meta name="description" content="あいしぃーのサーバー" />
 <meta property="og:type" content="HP" />
 <meta property="og:title" content="りょうま" />
-<meta property="og:description" content="りょうま、最近181cmになりました。うぇーい" />
+<meta property="og:description" content="運営のりょうまさんのプロフィールページ" />
 <meta property="og:site_name" content="あいしぃーのサーバー" />
 <meta property="og:image" content="https://aic-group.sytes.net/images/admins/ryouma.png" />
 <title>りょうま - あいしぃーのサーバー</title>
@@ -69,4 +69,3 @@ ob_start();
 </div>
 </div>
 <p style="text-align: center; font-size: 15px;">このページの最終更新日：<?php date_default_timezone_set('asia/tokyo'); clearstatcache(); echo date( "Y/m/d H:i:s", filemtime(__FILE__)); ?></p>
-<div class="modals" id="modals">

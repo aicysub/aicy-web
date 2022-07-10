@@ -49,7 +49,7 @@ ob_start();
 <meta name="description" content="あいしぃーのサーバー" />
 <meta property="og:type" content="HP" />
 <meta property="og:title" content="ねもやんす - nemoyans" />
-<meta property="og:description" content="ねもやんす - nemoyans、あいしぃーのサーバーのポケモン変態代表" />
+<meta property="og:description" content="運営のねもやんすさんのプロフィールページ" />
 <meta property="og:site_name" content="あいしぃーのサーバー" />
 <meta property="og:image" content="https://aic-group.sytes.net/images/admins/nemoyans.png" />
 <title>ねもやんす - あいしぃーのサーバー</title>
@@ -71,4 +71,3 @@ ob_start();
 </div>
 </div>
 <p style="text-align: center; font-size: 15px;">このページの最終更新日：<?php date_default_timezone_set('asia/tokyo'); clearstatcache(); echo date( "Y/m/d H:i:s", filemtime(__FILE__)); ?></p>
-<div class="modals" id="modals">

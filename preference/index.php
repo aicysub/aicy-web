@@ -9,6 +9,11 @@ if (isset($_COOKIE['white'])){
 if (isset($_COOKIE['special'])){
   $special_select_status = "preference-img-selected";
 }
+if (isset($_COOKIE['anime'])){
+  $anime_true_select_status = "preference-img-selected";
+} else {
+  $anime_false_select_status = "preference-img-selected";
+}
 ?>
 <div class="preference-modal">
   <style>
@@ -72,8 +77,8 @@ if (isset($_COOKIE['special'])){
   <p class="preference-main-title">設定一覧</p><br>
 <ul class="preference-list">
  <li onclick="config_themes()" id="config-top">テーマ設定</li>
- <li onclick="config_anime()">アニメーション設定（作成中）</li>
- <li onclick="config_color()">デザイン設定（上級者向け）</li>
+ <li onclick="config_anime()">アニメ設定</li>
+ <li onclick="config_color()">デザイン設定（作成中）</li>
  <li onclick="setup_warning()">初期化（再セットアップ）</li>
 </ul>
 <br>
@@ -109,10 +114,18 @@ if (isset($_COOKIE['special'])){
   <div class="preference-main" id="anime-config">
   <p class="preference-main-title" id="preference-anime">アニメーションの設定</p><br>
 
-  <ul class="preference-img">   
+  <ul class="preference-img" style="width: 90%;margin: auto;margin-left: 4em;">   
   <li><label for="anime-true" onclick="anime_true_click()" >
-  <video id="anime_true" class="<?php echo $anime_true;?>" loop muted autoplay src="/video/anime-true.webm"></label>
-  <p><input type="radio" name="themes" id="white" value="white"><label for="white">ホワイト</label></p>   </li>  <li><label for="dark" onclick="dark_click()" ><img id="dark-img" class="<?php echo $anime_false;?>" src="https://aic-group.sytes.net/images/dark-mode.png"></label> <p>     <input type="radio" name="themes" id="dark" value="dark"><label for="dark">ダーク</label></p>  </li></ul>
+  <video id="anime_true_video" class="<?php echo $anime_false_select_status;?>" loop muted autoplay src="/video/anime-true.webm"></label>
+  <p><input type="radio" name="anime" id="anime-true" value="anime-true"><label for="anime">有効</label></p>   </li> 
+  <li><label for="anime-false" onclick="anime_false_click()" >
+  <video id="anime_false_video" class="<?php echo $anime_true_select_status;?>" loop muted autoplay src="/video/anime-false.webm"></label>
+  <p><input type="radio" name="anime" id="anime-false" value="anime-false"><label for="anime">無効</label></p>   </li> 
+</ul>
     <p id="saved">設定を保存しました。</p>
 <p>変更した設定は、あとからいつでも変更できます。</p>
+  </div>
+  <div class="preference-end" id="preference-anime-end">
+    <p class="preference-etc" onclick="etc_config()">ほかの設定</p>
+    <p class="preference-submit" onclick="preference_close()">完了</p>
   </div>

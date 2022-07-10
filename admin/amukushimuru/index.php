@@ -46,7 +46,7 @@ ob_start();
 <meta name="description" content="あいしぃーのサーバー" />
 <meta property="og:type" content="HP" />
 <meta property="og:title" content="アムクシル" />
-<meta property="og:description" content="アムクシル、性別・年齢不詳" />
+<meta property="og:description" content="運営のアムクシルさんのプロフィールページ" />
 <meta property="og:site_name" content="あいしぃーのサーバー" />
 <meta property="og:image" content="https://aic-group.sytes.net/images/admins/amukushimuru.png" />
 <title>アムクシル - あいしぃーのサーバー</title>
@@ -73,4 +73,3 @@ ob_start();
 </div>
 <br>
 <p style="text-align: center; font-size: 15px;">このページの最終更新日：<?php date_default_timezone_set('asia/tokyo'); clearstatcache(); echo date( "Y/m/d H:i:s", filemtime(__FILE__)); ?></p>
-<div class="modals" id="modals">

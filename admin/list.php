@@ -10,7 +10,7 @@ include("".$dir."/admin/amukushimuru/amukushimuru.php");
 include("".$dir."/admin/edamame/edamame.php");
 include("".$dir."/admin/gijutsu/gijutsu.php");
 include("".$dir."/admin/ginzyou-genryu/ginzyou-genryu.php");
-include("".$dir."/admin/kumi/kumi.php");
+include("".$dir."/admin/mahuyu/mahuyu.php");
 include("".$dir."/admin/chasyumen/chasyumen.php");
 include("".$dir."/admin/nemoyans/nemoyans.php");
 include("".$dir."/admin/papurusuta/papurusuta.php");
