@@ -1,0 +1,35 @@
+.name-list {
+    display: block !important;
+    width: 25em !important;
+    height: 15em;
+    padding: 1%;
+  }
+  .navbar-item, .navbar-link {
+    padding: 5px;
+  }
+  .navbar-link, a.navbar-item {
+    font-size: 20px;
+  }
+.flex {
+    overflow: initial !important;
+}
+.name {
+    width: 14.5em;
+}
+.description {
+    width: 23em;
+}
+.h2 {
+    width: 80%;
+}
+.admin-more {
+    margin-left: 0;
+    margin-right: 0
+}
+.link,.box,.unei {
+    margin-left: 15%;
+    margin-right: 15%;
+}
+.buttons:last-child {
+    margin-right: 1em;
+}

@@ -1,0 +1,128 @@
+.name-list {
+    width: 100%;
+    margin-bottom: 3%;
+}
+.h2 {
+    width: 80%;
+}
+.unei {
+    font-size: 1.3em;
+    margin-left: 0%;
+    margin-right: 0%;
+}
+.box {
+    margin-left: 0%;
+margin-right: 0%;
+}
+.h3 {
+    width: 90%;
+}
+.event {
+    width: 100%;
+}
+.description {
+    font-size: 0.9em;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.name {
+    font-size: 1.2em;
+}
+.link {
+    margin-left: 0%;
+    margin-right: 0%;
+    display: block;
+}
+.link-a {
+    margin-bottom: 3%;
+}
+.navbar{ 
+    min-height: 7em;
+    border-bottom: none;
+}
+.navbar-brand .navbar-item, .navbar-tabs .navbar-item {
+    font-size: 17px;
+    border-radius: 8px;
+    margin-top: 1.5em;
+    margin-bottom: auto;
+    top: auto;
+  }
+  .navbar-brand, .navbar-tabs {
+    padding-top: 0.5em;
+    min-height: 7.3rem !important;
+  }
+  .navbar-brand {
+    border-bottom: 3px solid #906862;
+  }
+  .navbar-brand {
+    margin-bottom: auto;
+    margin-top: auto;
+}
+.footers .is-active {
+bottom: -200px !important;
+}
+.admin-more-top .name-list {
+    margin-top: 15%;
+  }
+.is-active .navbar-item,.is-active .navbar-link {
+  padding-top: 0px;
+  margin: 1%;
+}
+.navbar-menu.is-active,.navbar-menu {
+    animation-name: fuwa;
+animation-duration: 3.5s;
+animation-timing-function: ease;
+} 
+  .box {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    .navbar-burger span:nth-child(1) {
+        top: calc(50% - 6px);
+      }
+      .navbar-burger span {
+        background-color: currentColor;
+        display: block;
+        height: 1px;
+        left: calc(50% - 8px);
+        position: absolute;
+        transform-origin: center;
+        transition-duration: 86ms;
+        transition-property: background-color,opacity,transform;
+        transition-timing-function: ease-out;
+        width: 16px;
+      }
+    .navbar-menu {
+        display: none !important;
+    }
+    .navbar-burger {
+        display: block !important;
+    }
+    .navbar-menu {
+        box-shadow: 0 8px 16px rgba(10,10,10,.1);
+        padding: .5rem 0;
+      }
+    .navbar-menu.is-active {
+        display: block !important;
+      }
+      .admin-more {
+          margin-left: 0%;
+          margin-right: 0%;
+      }
+      .flex, .admin-more {
+        display: grid !important;
+      }
+      .admin-more-top .name-list {
+        margin-top: 30% !important;
+        scale: 1.5;
+        margin-bottom: 20% !important;
+      }
+      .flex, .admin-more {
+        overflow: hidden;
+        display: grid !important;
+      }
+      .name-list {
+        display: block !important;
+width: 100% !important;
+      }

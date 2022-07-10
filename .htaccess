@@ -1,0 +1,14 @@
+RewriteCond %{HTTPS} off
+RewriteRule (.*) https://%{HTTP_HOST}/%{REQUEST_URI} [R,L]
+
+RewriteRule ^(.*/[^./]+)$ $1/ [R=301,L]
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^(.*)$ %{REQUEST_FILENAME}.php/ [L]
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME}\.js -f
+RewriteRule ^(.*)$ %{REQUEST_FILENAME}.js/ [L]

@@ -1,0 +1,7 @@
+:root {
+    --shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+}
+#content-inner {
+    border-radius: 20px 20px 20px 20px;
+    box-shadow: var(--shadow);
+}
