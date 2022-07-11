@@ -233,7 +233,6 @@ if ((strpos($ua, 'Android') !== false) && (strpos($ua, 'Mobile') !== false) || (
              $('.footers').css('bottom', '0px'); 
                     history.pushState(null, null, $('#setup').attr('url'));
                     $('a').css('pointer-events', 'all').attr('tabindex', 1);
-                    $('.navbar-dropdown').css('display', 'block').attr('tabindex', 1);
                     $('.bread').css('opacity','1');   
                     $('.preference-status').fadeOut(1000); 
                     setTimeout(function(){
@@ -260,7 +259,6 @@ if ((strpos($ua, 'Android') !== false) && (strpos($ua, 'Mobile') !== false) || (
                   },300);
                   setTimeout(function(){
                     $('#modals').css('display','none'); 
-                    $('.navbar-dropdown').css('display','none'); 
                 },300);
             setTimeout(function(){
             $('#modals').fadeOut(300);  
