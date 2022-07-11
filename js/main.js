@@ -229,6 +229,18 @@ history.pushState(null, null, nextPage);
 },600);
 setTimeout(function(){
   $('.contents').fadeIn(600);
+  $('img').attr('loading','lazy');
+    $('select').change(function () {
+  var val = $('select option:selected').val();
+  if (val == 'select') return;
+  $('section').fadeOut(600);
+  $('#selected').fadeOut(600);
+  setTimeout(function(){
+    $('section#' + val ).fadeIn(600);
+    $('#selected').css('display','none');
+  });
+});
+twemoji.parse(document.body);
 },1000);
 return false;
 });
@@ -310,6 +322,18 @@ $('#setup').load(nextPage +' #setup');
 },600);
 setTimeout(function(){
   $('.contents').fadeIn(600);
+  $('img').attr('loading','lazy');
+  $('select').change(function () {
+var val = $('select option:selected').val();
+if (val == 'select') return;
+$('section').fadeOut(600);
+$('#selected').fadeOut(600);
+setTimeout(function(){
+  $('section#' + val ).fadeIn(600);
+  $('#selected').css('display','none');
+},599);
+  });
+twemoji.parse(document.body);
 },1000);
     return false;
 });
@@ -357,16 +381,6 @@ jQuery.prototype.mousedragscrollable = function () {
             $(".contacts-copy").text("コピーする")
           },2000);
     });
-  });
-  $('select').change(function () {
-    var val = $('select option:selected').val();
-    if (val == 'select') return;
-    $('section').fadeOut();
-    $('#selected').fadeOut();
-    setTimeout(function(){
-      $('section#' + val ).fadeIn();
-      $('#selected').css('display','none');
-  },400);
   });
 function first_white_click() {
   $('link[href^="/css/dark"]').remove();
@@ -623,6 +637,7 @@ function first_white_click() {
             });
           
           });
+        $('img').attr('loading','lazy');
         },1500);
         });
         function config_anime() {

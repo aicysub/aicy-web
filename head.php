@@ -10,8 +10,8 @@ header_register_callback(function(){
 <meta charset="utf-8"/>
 <link rel="stylesheet" href="/css/preload.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <script src="https://twemoji.maxcdn.com/2/twemoji.min.js?12.0.0"></script>
     <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.min.js"></script>
-    <script src="https://twemoji.maxcdn.com/2/twemoji.min.js?12.0.0" async></script>
     <link rel="icon" type="image/gif" href="/favicon.gif">
       </head>
 <body>
@@ -112,16 +112,9 @@ header_register_callback(function(){
                 <a class="navbar-item" href="/unei/">
                     <i class="fa-solid fa-flag"></i>  運営になる
                 </a>
-                <a class="navbar-item" href="https://aic-group.sytes.net/contacts/" id="contacts">
+                <a class="navbar-item" href="/contacts/" id="contacts">
                     <i class="fa-solid fa-address-book"></i>   お問い合わせ / 報告
                 </a>
-                <hr class="navbar-divider">
-                <a class="navbar-item" href="https://aic-group.sytes.net/fuck2/" target="_blank">
-                <i class="fa-solid fa-poo"></i>  今話題の商標の状態 2
-            </a>
-            <a class="navbar-item" href="https://aic-group.sytes.net/fuck/" target="_blank">
-                <i class="fa-solid fa-poo"></i>  今話題の商標の状態 1（権利放棄）
-            </a>
             <hr class="navbar-divider">
             <a class="navbar-item" onclick="setup_modal()">
           <i class="fa-solid fa-box-open"></i> セットアップ（初期化）

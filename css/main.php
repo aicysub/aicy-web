@@ -895,7 +895,7 @@ button.is-primary.is-hovered,
 .contents a:hover {
   transform: translateY(3px);
   text-decoration: underline;
-  text-underline-offset: 10px;
+  text-underline-offset: 5px;
 }
 
 .contents .link-a {

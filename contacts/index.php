@@ -14,7 +14,7 @@ ob_start();
   </li>
   <li itemprop="itemListElement" itemscope
       itemtype="https://schema.org/ListItem">
-    <a itemprop="item" href="<?php echo $_SERVER['REQUEST_URI']; ?>">
+    <a itemprop="item" href="/contacts/">
         <span itemprop="name">お問い合わせ</span>
     </a>
     <meta itemprop="position" content="2" />
@@ -122,4 +122,4 @@ ob_start();
     <p><br>(ご返信にお時間を頂く場合がございます。予めご了承ください。)</p>
 </form>
 </div>
-<div class="modals" id="modals">
+<br><br>
