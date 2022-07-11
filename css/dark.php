@@ -5,22 +5,23 @@ header('Pragma:no-cache');
 $original_css = ':root {
    --main-text: #CDCDCD;
    --corsor-color: rgba(255, 255, 255, .535);
-   --background-secondary: #2A2B2C;
+   --background-secondary: #26292B;
    --focus: rgb(100 172 255);
-   --background-primary: #161718;
+   --background-primary: #252729;
    --border: 2px solid #424343;
    --border-color: #424343;
    --input-background: #59595B;
    --opacity-color: #E5E5E67D;
-   --nav-focus: #4F5052;
+   --nav-focus: #343435;
    --modal: #222224;
    --site-background: #222224;
-   --nav-background: #1c1e204a;
+   --nav-background: #2324254a;
    --button-background: #515254;
- }
+   --shadow: 0 22px 70px 4px rgba(0, 0, 0, 0.56);
+}
  
  html {
-   background-color: #222224;
+   background-color: #16181A;
    color: #fff
  }
  

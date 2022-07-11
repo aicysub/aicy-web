@@ -58,7 +58,7 @@ ob_start();
 <img src="/images/admins/n-gijutsu.webp" style="width: 20%; border: 3px solid #906862; border-radius: 50%; box-shadow: 0 3px 3px rgb(0 0 0/12%),0 2px 3px -2px rgb(0 0 0/1%);">
 </div>
 <h2 class="title h2" style="text-align: center;">ゆっくり技術とまめにあ</h2>
-<p style="text-align: center;">本人希望のアイコン・本人希望の背景</p>    <?php include '/hdd/aic/edit.php'; ?>
+<p style="text-align: center;">本人希望の背景</p>    <?php include '/hdd/aic/edit.php'; ?>
 <br>
 <p class="unei">そこの君！続きを見たな！？
 <br>そこの君にだけこのサーバーの秘密を教えるよ！<br>なんとこのサーバーはきまぐれで<a href="/events/nitro">Nitro配りやってるよ！</a><br>早い者勝ちだから取れるか分からないけど是非チャレンジしてみてね！<br>あと分からないことがあったら運営に聞いてね！<br>

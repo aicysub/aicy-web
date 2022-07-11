@@ -61,7 +61,7 @@ ob_start();
 <br>
 <p class="unei">まふゆです。呼び方はなんでもよい<br>趣味はゲームと料理と音楽です<br>ゲームはマイクラとかシティすかとかやってます。<br>実はマイクラサーバーやってたりします。<br>よろしく🤝<br>
 <h2 class="title h2" style="text-align: center;">ほかの運営</h2>
-<div class="admin-more kumi">
+<div class="admin-more mahuyu">
 <?php
 include('/hdd/aic/admin/list.php');
 ob_start();

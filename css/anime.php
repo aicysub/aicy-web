@@ -276,6 +276,15 @@ a.navbar-item,
     display: none;
   }
 }
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
 ';
 if(!isset($_GET['original'])){
   $css_replaces = [];

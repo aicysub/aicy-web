@@ -11,7 +11,7 @@ header_register_callback(function(){
 <link rel="stylesheet" href="/css/preload.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
     <script src="https://twemoji.maxcdn.com/2/twemoji.min.js?12.0.0"></script>
-    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.min.js" defer></script>
     <link rel="icon" type="image/gif" href="/favicon.gif">
       </head>
 <body>
@@ -71,28 +71,28 @@ header_register_callback(function(){
                 <img src="/images/admins/amukushimuru.png" class="icon-img" width="33"> アムクシル
                     </a>
                     <a class="navbar-item" href="/admin/chasyumen/" id="cha">
-                    <img src="/images/admins/chasyumen.png" class="icon-img" width="33">  <ruby data-ruby="ちゃーしゅーめん">chasyumen<rt style="text-align:center;">ちゃーしゅーめん</rt></ruby>
+                    <img src="/images/admins/chasyumen.webp" class="icon-img" width="33">  <ruby data-ruby="ちゃーしゅーめん">chasyumen<rt style="text-align:center;">ちゃーしゅーめん</rt></ruby>
                     </a>
                     <a class="navbar-item" href="/admin/edamame/" id="eda">
-                    <img src="/images/admins/edamame.png" class="icon-img" width="33">  えだまめ
+                    <img src="/images/admins/edamame.webp" class="icon-img" width="33">  えだまめ
                     </a>
                     <a class="navbar-item" href="/admin/gijutsu/" id="gaki">
-                    <img src="/images/admins/gijutsu.png" class="icon-img" width="33">  技術
+                    <img src="/images/admins/n-gijutsu.webp" class="icon-img" width="33">  ゆっくり技術とまめにあ
                     </a>
                     <a class="navbar-item" href="/admin/ginzyou-genryu/" id="ginzyou">
-                    <img src="/images/admins/ginzyou-genryu.png" class="icon-img" width="33">  <ruby data-ruby="ぎんじょうげんりゅう">銀城幻龍<rt style="text-align:center;">ぎんじょうげんりゅう</rt></ruby>：アラハバキ</ruby>
+                    <img src="/images/admins/ginzyou-genryu.webp" class="icon-img" width="33">  <ruby data-ruby="ぎんじょうげんりゅう">銀城幻龍<rt style="text-align:center;">ぎんじょうげんりゅう</rt></ruby>：アラハバキ</ruby>
                     </a>
-                    <a class="navbar-item" href="/admin/kumi/" id="kumi">
-                    <img src="/images/admins/kumi.png" class="icon-img" width="33">  &#x2B50クミ
+                    <a class="navbar-item" href="/admin/mahuyu/" id="kumi">
+                    <img src="/images/admins/mahuyu.webp" class="icon-img" width="33">  まふゆ
                     </a>
                     <a class="navbar-item" href="/admin/nemoyans/" id="nemo">
-                    <img src="/images/admins/nemoyans.png" class="icon-img" width="33">  <ruby data-ruby="ねもやんす">nemoyans<rt style="text-align:center;">ねもやんす</rt></ruby>
+                    <img src="/images/admins/nemoyans.webp" class="icon-img" width="33">  <ruby data-ruby="ねもやんす">nemoyans<rt style="text-align:center;">ねもやんす</rt></ruby>
                     </a>
                     <a class="navbar-item" href="/admin/papurusuta/" id="papu">
-                    <img src="/images/admins/papurusuta.png" class="icon-img" width="33">  <ruby data-ruby="ぱぷるすた">papurusuta<rt style="text-align:center;">ぱぷるすた</rt></ruby>
+                    <img src="/images/admins/papurusuta.webp" class="icon-img" width="33">  <ruby data-ruby="ぱぷるすた">papurusuta<rt style="text-align:center;">ぱぷるすた</rt></ruby>
                     </a>
                     <a class="navbar-item" href="/admin/ryouma/" id="ryo">
-                    <img src="/images/admins/ryouma.png" class="icon-img" width="33">  りょうま
+                    <img src="/images/admins/ryouma.webp" class="icon-img" width="33">  りょうま
                     </a>
               </div>
               </div>
@@ -136,8 +136,6 @@ header_register_callback(function(){
         <i class="fa-solid fa-arrow-turn-up"></i>
 </p>
 <div class="hide" style="top: 0;right: 0;bottom: 0;left: 0;z-index: 100;opacity: 1;">
-<script async defer src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7768523920396309"
-     crossorigin="anonymous"></script>
      <?php
      date_default_timezone_set('asia/tokyo'); clearstatcache(); 
      $main_js_v = "?v=".date("Y-m-d.h")."";
@@ -180,19 +178,19 @@ if (isset($_COOKIE['special'])){
 }else{
 
 }
-if (isset($_COOKIE['access'])){
+  if (empty($_COOKIE['access'])){
+    echo "
+    <script>
+    setTimeout(function(){loadCSS( '/css/dark/".$dark_css_v."', document.getElementById('loadcss') );},900);
+    setTimeout(function(){loadCSS( '/css/special/".$special_css_v."', document.getElementById('loadcss') );},900);
+    document.cookie = 'special=true';
+    $(document).ready(function(){
+  setup();
+    });
+      </script>
+      ";
+  }else{
 
-}else{
-  echo "
-  <script>
-  setTimeout(function(){loadCSS( '/css/dark/".$dark_css_v."', document.getElementById('loadcss') );},900);
-  setTimeout(function(){loadCSS( '/css/special/".$special_css_v."', document.getElementById('loadcss') );},900);
-  document.cookie = 'special=true';
-  $(document).ready(function(){
-setup();
-  });
-    </script>
-    ";
 }
 if (isset($_COOKIE['auto'])){ 
   $time = intval(date('H'));
@@ -226,6 +224,22 @@ echo "</script>";
 ?>
 <script>
    $(document).ready(function(){
+        //<![CDATA[
+        var lazyloadads = false;
+        window.addEventListener("scroll", function() {
+            if ((document.documentElement.scrollTop != 0 && lazyloadads === false) || (document.body.scrollTop != 0 && lazyloadads === false)) {
+                (function() {
+                    var ad = document.createElement('script');
+                    ad.type = 'text/javascript';
+                    ad.async = true;
+                    ad.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js';
+                    var sc = document.getElementsByTagName('script')[0];
+                    sc.parentNode.insertBefore(ad, sc);
+                })();
+                lazyloadads = true;
+            }
+        }, true)
+        //]]>
   twemoji.parse(document.body);
    });
 </script>

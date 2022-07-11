@@ -35,18 +35,16 @@ body {
   --corsor-color: #26292c78;
   --shadow: rgba(0, 0, 0, 0.133) 0px 1.6px 3.6px 0px, rgba(0, 0, 0, 0.11) 0px 0.3px 0.9px 0px;
   --hover-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.04), -10px 0 20px 0px rgba(0, 0, 0, 0.04);
-  ;
-  --background-secondary: #FFFFFF;
+  --background-secondary: #F5F5F6;
   --focus: rgba(3, 102, 214, 0.3);
-  --border: 2px solid #B2B2B2;
-  --border-color: #B2B2B2;
-  --background-primary: #DFDFDF;
-  --background-primary-border: 1px solid #CBCBCB;
+  --border: 2px solid #BDBDBD;
+  --border-color: #BDBDBD;
+  --background-primary: #E7E7E7;
   --input-background: #F4F4F4;
   --opacity-color: #ADADAD;
-  --nav-focus: #D4D4D4;
+  --nav-focus: #CBCBCB;
   --accent: #906862;
-  --modal: #F6F6F6;
+  --modal: #DFDFDF;
   --site-background: #F6F6F6;
   --nav-background: #ffffff8c;
   --button-background: #FFF;
@@ -61,7 +59,7 @@ body {
 }
 
 html {
-  background-color: #F6F6F6;
+  background-color: #FFFFFF;
 }
 
 br {
@@ -268,7 +266,6 @@ button.is-primary.is-hovered,
   border-radius: 0px 0px 20px 20px;
   border-top: 3px solid transparent;
   box-shadow: rgba(72, 72, 72, 0.18) 0px 13px 26px;
-  backdrop-filter: saturate(180%) blur(20px);
   border-left: var(--border);
   border-right: var(--border);
   border-bottom: var(--border);
@@ -463,9 +460,9 @@ a {
   background-size: 100%;
   background-position: center;
   cursor: pointer;
-  transform: translateY(-30px) scale(1.1);
   box-shadow: var(--shadow);
   z-index: 300;
+  animation: rotate 1s 0.3s infinite;
 }
 
 .bread:hover {
@@ -511,11 +508,10 @@ a {
 
 .admin-more {
   justify-content: center;
-  padding-bottom: 4%;
+  padding-bottom: 50px;
+  padding-top: 30px;
   overflow: visible;
   text-align: center;
-  margin-left: 3%;
-  margin-right: 3%;
 }
 
 .box {
@@ -911,11 +907,6 @@ button.is-primary.is-hovered,
   display: block;
 }
 
-.webkit-box,
-.name-list {
-  margin-top: 3%;
-}
-
 .webkit-box {
   animation: scroll 18s linear infinite;
 }
@@ -928,7 +919,7 @@ button.is-primary.is-hovered,
 .machatofu #machatofu,
 .ryouma #ryouma,
 .papurusuta #papurusuta,
-.kumi #kumi,
+.mahuyu #mahuyu,
 .gijutsu #gijutsu,
 .edamame #edamame,
 .chasyumen #chasyumen,

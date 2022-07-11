@@ -76,7 +76,7 @@ display: none;
   </div>
     <div class="preference-end" id="setup-1-end" style="justify-content: space-between;border-top: 0px;background: transparent;padding-bottom: 15px;padding-top: 0;">
     <p style="margin-left: 2%;margin-bottom: 10px;" id="pc">設定は<a id="link-true" href="https://ja.wikipedia.org/wiki/HTTP_cookie" target="_blank">Cookie</a>に保存されます。</p>
-    <p class="preference-etc" id="next-1" style="margin-bottom: 10px;" onclick="setup_finish(); document.cookie = 'white=true; path=/'; document.cookie = 'access=true; path=/';">セットアップをスキップ</p>
+    <p class="preference-etc" id="next-1" style="margin-bottom: 10px;" onclick="setup_finish(); document.cookie = 'white=true; path=/ expires=Fri, 31-Dec-2038 23:59:59 JST;'; document.cookie = 'access=true; path=/'; expires=Fri, 31-Dec-2038 23:59:59 JST;">セットアップをスキップ</p>
   </div>
 <div class="preference-main" id="setup-2">
   <p class="preference-main-title">表示カラーの設定</p><br>
@@ -105,7 +105,7 @@ display: none;
   </div>
     <div class="preference-end" id="setup-3-end">
     <p class="preference-etc" id="next-1" onclick="$('#setup-3').fadeOut(1000);$('#setup-3-end').fadeOut(1000); setTimeout(function(){$('#setup-2').fadeIn(1000);$('#setup-2-end').fadeIn(1000);$('#setup-2-end').css('display','flex'); $('.preference-title').text('セットアップ - 表示設定');},999)">前にもどる</p>
-    <p class="preference-submit" id="config-etc" onclick="setup_finish(); document.cookie = 'config=true; path=/;';">ほかの設定を変更</p>
+    <p class="preference-submit" id="config-etc" onclick="setup_finish(); document.cookie = 'config=true; path=/;' expires=Fri, 31-Dec-2038 23:59:59 JST;;">ほかの設定を変更</p>
   </div>
   <div class="preference-main" id="setup-4">
   <div id="loadings" style="margin: auto;position: relative;margin-top: 2%;display: none;"></div>
