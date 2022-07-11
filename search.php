@@ -20,7 +20,7 @@ $word_view = "「".$_GET["q"]."」の検索結果";
             <?php foreach ($stmt as $row): ?>
                                                     <div class="search">
                  <?php $counter++; ?>                                  
-                <a href="<?php echo $row[2]; ?>"><?php echo $row[0]?></a><hr><p style="font-size: 0.8em;"><?php echo $row[1]?></p>
+                <a href="<?php echo $row[2]; ?>"><?php echo $row[0]?></a><hr><p><?php echo $row[1]?></p>
             </div><br><br>
             <?php endforeach; ?>
             <?php

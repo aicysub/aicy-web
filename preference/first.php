@@ -64,7 +64,7 @@ display: none;
 <div class="preference-main" id="setup-1">
 <br>
   <div class="preference-icon">
-  <img src="/favicon.ico" class="preference-icon-img" id="setup-icon">
+  <img src="/favicon.ico" class="preference-icon-img" id="setup-icon" loading="lazy">
   <br><br>
   <p class="preference-main-title" id="setup-title">あいしぃーのさーばーへようこそ。</p>
   <p id="setup-subtitle">初回設定をはじめます。</p><br>
@@ -82,7 +82,7 @@ display: none;
   <p class="preference-main-title">表示カラーの設定</p><br>
 
   <ul class="preference-img">   
-  <li><label for="white" id="white-label" onclick="first_white_click()"><img id="white-img" src="https://aic-group.sytes.net/images/white-mode.png"></label><p><input type="radio" name="themes" id="white" value="white"><label for="white">ホワイト</label></p>   </li>  <li><label for="dark" onclick="first_dark_click()"><img id="dark-img" src="https://aic-group.sytes.net/images/dark-mode.png"></label> <p>     <input type="radio" name="themes" id="dark" value="dark"><label for="dark">ダーク</label></p>  </li><li><label for="special" id="special-label" onclick="first_special_click()"><img id="special-img" src="https://aic-group.sytes.net/images/special-mode.png"></label><p><input type="radio" name="themes" id="special" value="special"><label for="white">スペシャル</label></p></li></ul>
+  <li><label for="white" id="white-label" onclick="first_white_click()"><img id="white-img" src="https://aic-group.sytes.net/images/white-mode.png" loading="lazy"></label><p><input type="radio" name="themes" id="white" value="white"><label for="white">ホワイト</label></p>   </li>  <li><label for="dark" onclick="first_dark_click()"><img id="dark-img" src="https://aic-group.sytes.net/images/dark-mode.png" loading="lazy"></label> <p>     <input type="radio" name="themes" id="dark" value="dark"><label for="dark">ダーク</label></p>  </li><li><label for="special" id="special-label" onclick="first_special_click()"><img id="special-img" src="https://aic-group.sytes.net/images/special-mode.png" loading="lazy"></label><p><input type="radio" name="themes" id="special" value="special"><label for="white">スペシャル</label></p></li></ul>
 <br>
 <p id="saved">設定を保存しました。次にすすむを押してください。</p>
 <p>変更した設定は、あとからいつでも変更できます。</p>
@@ -95,7 +95,7 @@ display: none;
     <div class="preference-main" id="setup-3">
 <br>
   <div class="preference-icon">
-  <img src="/favicon.ico" class="preference-icon-img" id="setup-icon">
+  <img src="/favicon.ico" class="preference-icon-img" id="setup-icon" loading="lazy">
   <br><br>
   <p class="preference-main-title" id="setup-title">セットアップが完了しました。</p>
   <p id="setup-subtitle">変更を保存するには下のボタンを押してください。</p><br>

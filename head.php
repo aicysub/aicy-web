@@ -10,7 +10,6 @@ header_register_callback(function(){
 <meta charset="utf-8"/>
 <link rel="stylesheet" href="/css/preload.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.min.js"></script>
     <link rel="icon" type="image/gif" href="/favicon.gif">
       </head>
@@ -153,14 +152,14 @@ header_register_callback(function(){
      $config_js_v = "?v=".date("Y-m-d.h")."";
      $special_css_v = "?v=".date("Y-m-d.h")."";
 echo '
-<script type="text/javascript" src="/js/main.js'.$main_js_v.'"></script>
-<script type="text/javascript" src="/js/setup/'.$config_js_v.'"></script>
+<script type="text/javascript" src="/js/main.js'.$main_js_v.' "></script>
+<script type="text/javascript" src="/js/setup/'.$config_js_v.' "></script>
 ';
 echo '<script>';
-echo 'setTimeout(function(){loadCSS( "/css/main/'.$main_css_v.'", document.getElementById("loadcss") );},500);';
+echo 'setTimeout(function(){loadCSS( "/css/main/'.$main_css_v.'", document.getElementById("loadcss") );},900);';
 if (isset($_COOKIE['anime'])){
 } else{
-  echo 'setTimeout(function(){loadCSS( "/css/anime.css'.$main_css_v.'", document.getElementById("loadcss") );},500);';
+  echo 'setTimeout(function(){loadCSS( "/css/anime.css'.$main_css_v.'", document.getElementById("loadcss") );},900);';
 }
 if (strstr($ua, 'Trident') || strstr($ua, 'MSIE')) {
   header('Location: https://aic-group.sytes.net/ie/?p='.$_SERVER['REQUEST_URI'].'');
@@ -168,7 +167,7 @@ if (strstr($ua, 'Trident') || strstr($ua, 'MSIE')) {
 echo '</script>';
 if (isset($_COOKIE['dark'])){
   echo '<script>';
-    echo 'setTimeout(function(){loadCSS( "/css/dark/'.$dark_css_v.'", document.getElementById("loadcss") );},500);';
+    echo 'setTimeout(function(){loadCSS( "/css/dark/'.$dark_css_v.'", document.getElementById("loadcss") );},900);';
     echo '</script>';
 }else{
 
@@ -181,8 +180,8 @@ if (isset($_COOKIE['special'])){
     pointer-events: none;
   }</style>";
   echo '<script>';
-    echo 'setTimeout(function(){loadCSS( "/css/dark/'.$dark_css_v.'", document.getElementById("loadcss") );},500);';
-    echo 'setTimeout(function(){loadCSS( "/css/special/'.$special_css_v.'", document.getElementById("loadcss") );},500);';
+    echo 'setTimeout(function(){loadCSS( "/css/dark/'.$dark_css_v.'", document.getElementById("loadcss") );},900);';
+    echo 'setTimeout(function(){loadCSS( "/css/special/'.$special_css_v.'", document.getElementById("loadcss") );},900);';
     echo '</script>';
 }else{
 
@@ -192,8 +191,8 @@ if (isset($_COOKIE['access'])){
 }else{
   echo "
   <script>
-  setTimeout(function(){loadCSS( '/css/dark/".$dark_css_v."', document.getElementById('loadcss') );},500);
-  setTimeout(function(){loadCSS( '/css/special/".$special_css_v."', document.getElementById('loadcss') );},500);
+  setTimeout(function(){loadCSS( '/css/dark/".$dark_css_v."', document.getElementById('loadcss') );},900);
+  setTimeout(function(){loadCSS( '/css/special/".$special_css_v."', document.getElementById('loadcss') );},900);
   document.cookie = 'special=true';
   $(document).ready(function(){
 setup();
@@ -204,7 +203,7 @@ setup();
 if (isset($_COOKIE['auto'])){ 
   $time = intval(date('H'));
   if (17 <= $time && $time <= 4) {
-   echo '<script>setTimeout(function(){loadCSS( "/css/dark/'.$dark_css_v.'", document.getElementById("loadcss") );},500);</script>';
+   echo '<script>setTimeout(function(){loadCSS( "/css/dark/'.$dark_css_v.'", document.getElementById("loadcss") );},900);</script>';
   }
 }
   else {
@@ -223,11 +222,11 @@ if (isset($_COOKIE['auto'])){
   echo "<script>";
   $ua = $_SERVER['HTTP_USER_AGENT'];
   if ((strpos($ua, 'Android') !== false) && (strpos($ua, 'Mobile') !== false) || (strpos($ua, 'iPhone') !== false) || (strpos($ua, 'Windows Phone') !== false)) {
-  echo 'setTimeout(function(){loadCSS( "/css/mobile/'.$main_css_v.'", document.getElementById("loadcss") );},500);';
+  echo 'setTimeout(function(){loadCSS( "/css/mobile/'.$main_css_v.'", document.getElementById("loadcss") );},900);';
   } elseif ((strpos($ua, 'Android') !== false) || (strpos($ua, 'iPad') !== false)) {
-  echo 'setTimeout(function(){loadCSS( "/css/mobile/'.$main_css_v.'", document.getElementById("loadcss") );},500);';
+  echo 'setTimeout(function(){loadCSS( "/css/mobile/'.$main_css_v.'", document.getElementById("loadcss") );},900);';
   } elseif ((strpos($ua, 'DoCoMo') !== false) || (strpos($ua, 'KDDI') !== false) || (strpos($ua, 'SoftBank') !== false) || (strpos($ua, 'Vodafone') !== false) || (strpos($ua, 'J-PHONE') !== false)) {
-  echo 'setTimeout(function(){loadCSS( "/css/mobile/'.$main_css_v.'", document.getElementById("loadcss") );},500);';
+  echo 'setTimeout(function(){loadCSS( "/css/mobile/'.$main_css_v.'", document.getElementById("loadcss") );},900);';
 }
 echo "</script>";
 ?>

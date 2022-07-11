@@ -4,13 +4,11 @@ header( 'Cache-Control: post-check=0, pre-check=0', FALSE );
 header('Pragma:no-cache');
 $original_css = '@font-face {
   font-family: "MainFonts";
-  src: url("/css/ヒラギノ角ゴシック W4.otf");
   font-display: swap;
 }
 
 @font-face {
   font-family: "HeadingFonts";
-  src: url("/css/ヒラギノ角ゴシック W6.otf");
   font-display: swap;
 }
 
@@ -199,6 +197,7 @@ a.navbar-item {
   top: 0em;
   margin-right: 10px;
   font-weight: bolder;
+  text-underline-offset: 5px;
 }
 
 a.navbar-item:hover,
@@ -210,6 +209,7 @@ a.navbar-item:hover,
   background-color: #0B51CD;
   color: #fff;
   transform: scale(1.05);
+  text-decoration: underline;
 }
 
 a.navbar-item:hover i,
@@ -894,6 +894,8 @@ button.is-primary.is-hovered,
 .button.is-primary:hover,
 .contents a:hover {
   transform: translateY(3px);
+  text-decoration: underline;
+  text-underline-offset: 10px;
 }
 
 .contents .link-a {
@@ -2054,12 +2056,12 @@ display: none;
 .search {
   margin-left: 20%;
   margin-right: 20%;
-  background: var(--background-secondary);
+  background: var(--background-primary);
   padding-top: 30px;
   padding-left: 50px;
   padding-bottom: 30px;
   font-size: 1.5em;
-  border-radius: 5000px;
+  border-radius: 2em;
   text-align: center;
   padding-right: 50px;
   box-shadow: var(--shadow);
@@ -2084,6 +2086,15 @@ display: none;
   justify-content: end;
   align-items: center;
   margin-right: 10px;
+}
+.search a {
+  font-size: 25px;
+}
+.search p {
+  font-size: 18px;
+}
+i::before {
+  display: inline-block;
 }
   ';
 if(!isset($_GET['original'])){

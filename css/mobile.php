@@ -299,10 +299,21 @@ $original_css = '@keyframes scroll {
     display: flex;
     justify-content: end;
     align-items: center;
-    margin-top: 5px;
+    margin-top: -25px;
     margin-right: 0px;
   }
-';
+  .search {
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 38px;
+  }
+  .search a{
+    font-size: 1em;
+}
+.search a{
+    font-size: 14px;
+}
+  ';
 if(!isset($_GET['original'])){
     $css_replaces = [];
     $css_replaces[ '/@charset \"(utf|UTF)-8\";/' ] = '';

@@ -1,6 +1,6 @@
 <?php
-require('/hdd/aic/head.html');
-$ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
+require_once('/hdd/aic/head.html');
+$ip = $_SERVER["REMOTE_ADDR"];
 echo '
 <ol itemscope class="bread none" itemtype="https://schema.org/BreadcrumbList">
   <li itemprop="itemListElement" itemscope
@@ -29,7 +29,7 @@ echo '
     include '/hdd/aic/edit.php';
     echo '<div class="box">';
 echo "<p style=\"font-size: 2em; border-bottom: 15px dotted #906862; text-align: center;\">".$ip."</p>";
+echo "<p style=\"font-size: 2em; border-bottom: 15px dotted #906862; text-align: center;\">ホスト名: ".gethostbyaddr($ip)."</p>";
 echo "<title>".$ip." - あいしぃーのさーばー</title>";
 ?>
 </div></div>
-<div class="modals" id="modals">
