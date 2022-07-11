@@ -10,7 +10,7 @@ $word_view = "「".$_GET["q"]."」の検索結果";
 
     $options = [];
     $pdo = new PDO($dsn, $username, $password, $options);
-          $stmt = $pdo->query(" SELECT * FROM main WHERE title LIKE '%" . $word . "%' AND (description like '%" . $word . "%')");
+          $stmt = $pdo->query(" SELECT * FROM main WHERE title LIKE '%" . $word . "%'");
           $counter = 0; 
 ?>
 <br>
