@@ -231,7 +231,7 @@ if ((strpos($ua, 'Android') !== false) && (strpos($ua, 'Mobile') !== false) || (
             $('#modals').fadeOut(300);  
             $('.preference-modal').addClass('modals-close');
              $('.footers').css('bottom', '0px'); 
-                    history.pushState(null, null, $('#setup').attr('url'));
+                    history.pushState(null, null, $('#top').attr('url'));
                     $('a').css('pointer-events', 'all').attr('tabindex', 1);
                     $('.bread').css('opacity','1');   
                     $('.preference-status').fadeOut(1000); 

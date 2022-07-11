@@ -39,10 +39,10 @@ header_register_callback(function(){
             $url = str_replace('.php', '', $location);
             $url = str_replace('index.php', '', $location);
             ?>
-          <a class="navbar-item" id="setup" onclick="setup()" url="<?php echo $url;?>">
+          <a class="navbar-item" id="setup" onclick="setup()">
           <i class="fa-solid fa-box-open"></i> セットアップ
 </a>
-            <a class="navbar-item" href="/" id="top">
+            <a class="navbar-item" href="/" id="top" url="<?php echo $url;?>">
                 <i class="fa-solid fa-house"></i> トップページ
 </a>
 <a class="navbar-item" href="https://aic-group.sytes.net/blog/" id="blog">
@@ -130,7 +130,7 @@ header_register_callback(function(){
 <?php require_once("/hdd/aic/input.php"); ?>
       </nav>
       <footer class="footers">
-<h2 class="title" style="text-align: center; padding-bottom: 10px; color: #FFF; text-shadow: 1px 1px 0 #906862, -1px -1px 0 #906862, -1px 1px 0 #906862, 1px -1px 0 #906862, 0px 1px 0 #906862, 0-1px 0 #906862, -1px 0 0 #906862, 1px 0 0 #906862;width: 100%;font-size: 1.5em;"><i class="fa-solid fa-copyright" style="color: #FFF;"></i>AIC_Group. / <a href="/owner/aicy/" class="none" id="aicy-footer"><img src="/favicon.ico" width="30"></a> <?php echo date('Y'); ?></h2><p class="color" style="text-align:center; font-size: 15px; font-weight: normal; margin-top: 1%;">現在ダークモードで表示しています</p><p class="white" style="text-align:center;font-size: 15px; font-weight: normal; margin-top: 1%;">現在ホワイトモードで表示しています</p><p style="text-align: center; font-size: 15px; font-weight: normal; " title="メニューの最終更新日" alt="メニューの最終更新日"></p><p style="text-align:center;"><span style="font-size: 13px;">Twemoji” by Copyright <?php echo date('Y'); ?> Twitter, Inc and other contributors is licensed under CC-BY 4.0</span><br><i class="fa-solid fa-clock-rotate-left"></i> <?php date_default_timezone_set('asia/tokyo'); clearstatcache(); echo date( "Y/m/d H:i", filemtime(__FILE__)); ?></p></p>
+<h2 class="title" style="text-align: center; padding-bottom: 10px; color: #FFF; text-shadow: 1px 1px 0 #906862, -1px -1px 0 #906862, -1px 1px 0 #906862, 1px -1px 0 #906862, 0px 1px 0 #906862, 0-1px 0 #906862, -1px 0 0 #906862, 1px 0 0 #906862;width: 100%;font-size: 1.5em;"><i class="fa-solid fa-copyright" style="color: #FFF;"></i>AIC_Group. / <a href="/owner/aicy/" class="none" id="aicy-footer"><img src="/favicon.ico" width="30"></a> <?php echo date('Y'); ?></h2><p class="color" style="text-align:center; font-size: 15px; font-weight: normal; margin-top: 1%;">現在ダークモードで表示しています</p><p class="white" style="text-align:center;font-size: 15px; font-weight: normal; margin-top: 1%;">現在ホワイトモードで表示しています</p><p style="text-align: center; font-size: 15px; font-weight: normal; " title="メニューの最終更新日" alt="メニューの最終更新日"></p><p style="text-align:center;"><span style="font-size: 13px;"><a href="https://twemoji.twitter.com/" target="_blank">Twemoji”</a> by Copyright <?php echo date('Y'); ?> <a href="https://about.twitter.com/" target="_blank">Twitter, Inc</a> and other <a href="https://github.com/twitter/twemoji/graphs/contributors/" target="_blank">contributors</a> is licensed under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC-BY 4.0</a></span><br><i class="fa-solid fa-clock-rotate-left"></i> <?php date_default_timezone_set('asia/tokyo'); clearstatcache(); echo date( "Y/m/d H:i", filemtime(__FILE__)); ?></p></p>
       </footer>
       <p style="cursor:pointer;" onclick="window.scroll({top: 0, behavior: 'smooth'})" id="page_top" class="top">
         <i class="fa-solid fa-arrow-turn-up"></i>
@@ -153,7 +153,7 @@ echo '<script>';
 echo 'setTimeout(function(){loadCSS( "/css/main/'.$main_css_v.'", document.getElementById("loadcss") );},900);';
 if (isset($_COOKIE['anime'])){
 } else{
-  echo 'setTimeout(function(){loadCSS( "/css/anime.css'.$main_css_v.'", document.getElementById("loadcss") );},900);';
+  echo 'setTimeout(function(){loadCSS( "/css/anime/'.$main_css_v.'", document.getElementById("loadcss") );},900);';
 }
 if (strstr($ua, 'Trident') || strstr($ua, 'MSIE')) {
   header('Location: https://aic-group.sytes.net/ie/?p='.$_SERVER['REQUEST_URI'].'');

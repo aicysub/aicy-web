@@ -390,15 +390,20 @@ code {
 
 .name-list {
   display: block;
-  padding: 1%;
-  border-radius: 18px;
+  padding-top: 20px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 20px;
+  border-radius: 3em;
   animation: kurun 1.5s ease;
-  margin-right: 1%;
+  margin-right: 15px;
   user-select: none;
   margin-top: 4%;
   background: var(--background-secondary);
+  margin-left: 15px;
+  border: var(--border);
+  box-shadow: var(--shadow);
   border-bottom: 6px solid var(--border-color);
-  margin-left: 1%;
 }
 
 a {
@@ -418,7 +423,11 @@ a {
   border-bottom: 3px ridge var(--accent);
   padding-bottom: 1%;
   color: var(--main-text);
-  width: 15em;
+  width: 400px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  font-weight: 600;
+  line-height: 1.125;
 }
 
 .open-label {
@@ -608,7 +617,6 @@ blockquote {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
-  width: 15.5em;
 }
 
 input[type="checkbox"].on-off {
@@ -739,6 +747,7 @@ a:hover span {
   display: inline-block;
   white-space: nowrap;
   margin-right: 1.5%;
+  font-weight: 900;
 }
 
 .download {

@@ -56,7 +56,7 @@ ob_start();
 <img src="/images/admins/full/chasyumen.png" style="width: 20%; border: 3px solid #906862; border-radius: 50%; box-shadow: 0 3px 3px rgb(0 0 0/12%),0 2px 3px -2px rgb(0 0 0/1%);">
 </div>
 <h2 class="title h2" style="text-align: center;">chasyumen</h2>
-<p style="text-align: center;"><i class="fa-solid fa-face-thinking"></i></p>    <?php include '/hdd/aic/edit.php'; ?>
+<p style="text-align: center;transform:scale(4)">🤔</p>    <?php include '/hdd/aic/edit.php'; ?>
 <br>
 <p class="unei">chasyumen(ちゃーしゅーめん)です<br>中級程度のDiscordのBot作れます<br>一応ポケモンファンでもあります<br>この鯖にいる人の中では多分一番変態ではないです(?)<br>アメリカ在住定期
 <br>
