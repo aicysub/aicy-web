@@ -259,7 +259,8 @@ if ((strpos($ua, 'Android') !== false) && (strpos($ua, 'Mobile') !== false) || (
                     $('.preference-modal').remove();
                   },300);
                   setTimeout(function(){
-                    $('#modals').css('display','none');  
+                    $('#modals').css('display','none'); 
+                    $('.navbar-dropdown').css('display','none'); 
                 },300);
             setTimeout(function(){
             $('#modals').fadeOut(300);  
