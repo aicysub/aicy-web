@@ -563,7 +563,7 @@ a {
 }
 
 .event {
-  background: #fff;
+  background: var(--background-primary);
   padding: 3%;
   width: 70%;
   text-align: center;

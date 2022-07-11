@@ -215,47 +215,23 @@ $("nav-item").click(function () {
   $("#navbarBasicExample").removeClass("is-active");
   $("nav-menu").removeClass("is-active");
 });
+$(document).ready(function(){
 $(document).on('click', 'a[href^="/"]', function(){
   $('link[href^="/owner/aicy/birthday.css"]').remove();
   $('script[src^="/owner/aicy/birthday.js"]').remove();
-  $('.hide').css('pointer-events','none');
-  $('.h2,.box,.bread,.unei,.name-list').fadeOut(500);
-  $('#modals').fadeIn();
-  $('#loadings').fadeIn();
-  $('#loadings').css('font-size','8px');
-  $('#loadings').css('opacity','0');
-  $('#loadings').show();
-    $('#loadings').css('opacity','1');
-  $('.contents').css('opacity', '0');
-    $('.contents').css('opacity', '1');
-    setTimeout(function(){
-      $('.hide').css('pointer-events','all');
-      $('#loadings').css('font-size','0px');
-      $('#loadings').css('display','none');
-    },1200);
-$('.contents').load($(this).attr("href") +' .contents');
-$('#setup').load($(this).attr("href") +' #setup');
+  $('input[name=search]').val('');
   var nextPage = $(this).attr('href');
-  history.pushState(null, null, nextPage);
+  $('.contents').fadeOut(600);
   setTimeout(function(){
-      window.scroll({top: 0, behavior: 'smooth'});
-  },100);
-  setTimeout(function(){
-  $(document).ready(function(){
-    setTimeout(function(){
-    $('.hide').css('pointer-events','all');
-    $('.h2,.box,.bread,.unei,.name-list').fadeIn(500);
-    $('#modals').fadeOut(500);
-  $('#loadings').css('font-size','0px');
-    setTimeout(function(){
-      $('#loadings').fadeOut();
-      $('#loadings').css('display','none');
-    },100);
-  });
-  window.scroll({top: 0, behavior: 'smooth'});
-},1000);
+  $('.contents').load(nextPage +' .contents');
+$('#setup').load(nextPage +' #setup');
+history.pushState(null, null, nextPage);
 },600);
-  return false;
+setTimeout(function(){
+  $('.contents').fadeIn(600);
+},1000);
+return false;
+});
 });
 $(document).ready(function(){
 $('input#url[type="submit"]').click(function(e) {
@@ -323,45 +299,18 @@ $(document).ready(function(){
 })})})});
 history.replaceState(null, null, null);
 window.addEventListener('popstate', function(e) {
-    $('.hide').css('pointer-events','none');
-    $('.hide').css('opacity','0.3');
-    $('.hide').css('background-color','rgb(0 0 0 / 39%)');
-    $('.hide').css('filter','blur(5px)');
-    $('#loadings').css('font-size','8px');
-    $('#loadings').css('opacity','0');
-    $('#loadings').show();
-      $('#loadings').css('opacity','1');
-    $('.contents').css('opacity', '0');
-      $('.contents').css('opacity', '1');
-      setTimeout(function(){
-        $('.hide').css('pointer-events','all');
-        $('.hide').css('opacity','1');
-        $('.hide').css('background-color','rgb(0 0 0 / 0%)');
-        $('.hide').css('filter','blur(0px)');
-        $('#loadings').css('font-size','0px');
-        $('#loadings').css('display','none');
-      },1200);
+  $('link[href^="/owner/aicy/birthday.css"]').remove();
+  $('script[src^="/owner/aicy/birthday.js"]').remove();
+  $('input[name=search]').val('');
+  var nextPage = location.pathname;
+  $('.contents').fadeOut(600);
   setTimeout(function(){
-    window.scroll({top: 0, behavior: 'smooth'});
-  },100);
-  $('.contents').load(location.pathname +' .contents');
-  $('.navbar-start').load(location.pathname +' .navbar-start');
-    var nextPage = location.pathname;
-    setTimeout(function(){
-        window.scroll({top: 0, behavior: 'smooth'});
-    },100);
-    setTimeout(function(){
-    $(document).ready(function(){
-      $('.hide').css('pointer-events','all');
-      $('.hide').css('opacity','1');
-      $('.hide').css('background-color','rgb(0 0 0 / 0%)');
-      $('.hide').css('filter','blur(0px)');
-      $('#loadings').css('font-size','0px');
-      setTimeout(function(){
-        $('#loadings').css('display','none');
-      },100);
-    });
-  },600);
+  $('.contents').load(nextPage +' .contents');
+$('#setup').load(nextPage +' #setup');
+},600);
+setTimeout(function(){
+  $('.contents').fadeIn(600);
+},1000);
     return false;
 });
 $('.vjs-fullscreen-control').click(
@@ -785,4 +734,20 @@ function() {
 $('#admin-nav').fadeOut(600);
 $('#etc-nav').fadeOut(600);
 $('#events-nav').fadeOut(600);
+});
+function search() {
+  window.scroll({top: 0, behavior: 'smooth'});
+  $('.contents').fadeOut(600);
+  history.pushState(null, null, '/search?q='+$('input[name=search]').val());
+  setTimeout(function(){
+  $('.contents').load('/search?q='+$('input[name=search]').val()+' .contents');
+},600); 
+  setTimeout(function(){
+  $('.contents').fadeIn(600);
+},1000); 
+}
+$('input[name=search]').keypress(function(e) {
+  if(e.which == 13) {
+     search();
+  }
 });
