@@ -2086,6 +2086,7 @@ display: none;
   justify-content: end;
   align-items: center;
   margin-right: 10px;
+  margin-top: -5px;
 }
 .search a {
   font-size: 25px;
@@ -2095,6 +2096,16 @@ display: none;
 }
 i::before {
   display: inline-block;
+}
+pre code.hljs {
+  border: none;
+  background: transparent;
+  box-shadow: none;
+  color: var(--opacity-color);
+}
+.emoji {
+  width: 1em;
+  margin-bottom: -3px;
 }
   ';
 if(!isset($_GET['original'])){

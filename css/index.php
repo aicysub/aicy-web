@@ -1,4 +1,8 @@
 <?php require("/hdd/aic/head.php");  $_GET['original'] ='original';  ?>
+<link rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/default.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
 <div style="text-align:center;">
 <?php 
   if(file_exists('/hdd/aic/css/'.$_GET['css'].'.php')){
@@ -18,6 +22,7 @@
 </div>
 <br>
 <pre class="box">
+<code class="language-css">
 <?php  
   if(file_exists('/hdd/aic/css/'.$_GET['css'].'.php')){
 require("/hdd/aic/css/".$_GET['css'].".php");
@@ -25,4 +30,5 @@ require("/hdd/aic/css/".$_GET['css'].".php");
 require("/hdd/aic/css/main.php");
   }
 ?>
+</code>
 </pre>
