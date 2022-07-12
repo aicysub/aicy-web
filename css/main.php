@@ -417,7 +417,7 @@ a {
   font-size: 1.6em;
   display: flex;
   align-items: center;
-  border-bottom: 3px ridge var(--accent);
+  border-bottom: 3px solid var(--accent);
   padding-bottom: 1%;
   color: var(--main-text);
   width: 400px;

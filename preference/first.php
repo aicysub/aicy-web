@@ -32,6 +32,7 @@ display: none;
     </style>
     <script>
         $(document).ready(function(){
+          setTimeout(function() {
            checkWidth = function(){
           var browserWidth = $(window).width();
           var boxW = $(".preference-modal").width();
@@ -54,6 +55,7 @@ display: none;
           checkHeight();
           $(window).resize(checkHeight);
       })
+    }, 499);
     });
       </script>
 <div class="preference">
@@ -75,8 +77,8 @@ display: none;
 <br>
   </div>
     <div class="preference-end" id="setup-1-end" style="justify-content: space-between;border-top: 0px;background: transparent;padding-bottom: 15px;padding-top: 0;">
-    <p style="margin-left: 2%;margin-bottom: 10px;" id="pc">設定は<a id="link-true" href="https://ja.wikipedia.org/wiki/HTTP_cookie" target="_blank">Cookie</a>に保存されます。</p>
-    <p class="preference-etc" id="next-1" style="margin-bottom: 10px;" onclick="setup_finish();">セットアップをスキップ</p>
+    <p style="margin-left: 2%;" id="pc">設定は<a id="link-true" href="https://ja.wikipedia.org/wiki/HTTP_cookie" target="_blank">Cookie</a>に保存されます。</p>
+    <p class="preference-etc" id="next-1" style="margin-bottom: 5px;" onclick="setup_finish(); document.cookie = 'special=true; path=/; expires=Fri, 31-Dec-2038 23:59:59 JST;';">セットアップをスキップ</p>
   </div>
 <div class="preference-main" id="setup-2">
   <p class="preference-main-title">表示カラーの設定</p><br>
@@ -108,5 +110,5 @@ display: none;
     <p class="preference-submit" id="config-etc" onclick="setup_finish(); document.cookie = 'config=true; path=/; expires=Fri, 31-Dec-2038 23:59:59 JST;';">ほかの設定を変更</p>
   </div>
   <div class="preference-main" id="setup-4">
-  <div id="loadings" style="margin: auto;position: relative;margin-top: 2%;"></div>
+  <div id="loadings" style="margin: auto;position: relative;margin-top: 15%;margin-bottom: 20%;box-shadow:var(--shadow);"></div>
   </div>

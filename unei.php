@@ -13,7 +13,7 @@ include_once('/hdd/aic/head.php');
 <h2 class="title h2" style="text-align: center;">鯖主紹介</h2>
 <p style="text-align: center;">あいしぃーのサーバーの鯖主をご紹介します。</p>
 <br>
-<div class="admin-more flex admin-more-top">
+<div class="admin-more flex admin-more-top" style="overflow-x: visible; overflow-y: visible;">
 <?php
 include('/hdd/aic/owner/aicy/aicy.php');
 ob_start();
@@ -22,7 +22,7 @@ ob_start();
 <h2 class="title h2" style="text-align: center;">運営紹介</h2>
 <p style="text-align: center;">あいしぃーのサーバーの運営をご紹介します。</p>
 
-<div class="flex admin-more" style="  overflow-x: visible; overflow-y: visible;">
+<div class="flex admin-more" style="overflow-x: visible; overflow-y: visible;">
 <?php
 include('/hdd/aic/admin/amukushimuru/amukushimuru.php');
 ?>
@@ -33,7 +33,7 @@ include('/hdd/aic/admin/gijutsu/gijutsu.php');
 include('/hdd/aic/admin/ginzyou-genryu/ginzyou-genryu.php');
 ?>
 </div>
-<div class="flex admin-more" style="  overflow-x: visible; overflow-y: visible;">
+<div class="flex admin-more" style="overflow-x: visible; overflow-y: visible;">
 <?php
 include('/hdd/aic/admin/mahuyu/mahuyu.php');
 ?>
@@ -44,7 +44,7 @@ include('/hdd/aic/admin/chasyumen/chasyumen.php');
 include('/hdd/aic/admin/nemoyans/nemoyans.php');
 ?>
 </div>
-<div class="flex admin-more" style="  overflow-x: visible; overflow-y: visible;">
+<div class="flex admin-more" style="overflow-x: visible; overflow-y: visible;">
 <?php
 include('/hdd/aic/admin/papurusuta/papurusuta.php');
 ?>

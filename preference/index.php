@@ -45,6 +45,7 @@ if (isset($_COOKIE['anime'])){
   ?>
   <script>
         $(document).ready(function(){
+          setTimeout(function() {
            checkWidth = function(){
           var browserWidth = $(window).width();
           var boxW = $(".preference-modal").width();
@@ -67,6 +68,7 @@ if (isset($_COOKIE['anime'])){
           checkHeight();
           $(window).resize(checkHeight);
       })
+    }, 499);
     });
     </script>
 <title>サイトの設定 - あいしぃーのさーばー</title>

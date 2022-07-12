@@ -672,6 +672,7 @@ function setup_finish() {
   document.cookie = 'access=true; path=/; expires=Fri, 31-Dec-2038 23:59:59 JST;';
   $('.preference-main').fadeOut(500);
   $('#setup-1-end').fadeOut(500);
+  $('#setup-3-end').fadeOut(500);
   setTimeout(function() {
     $('#setup-4').fadeIn(600);
   }, 499);
