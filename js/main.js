@@ -267,6 +267,7 @@ $(document).ready(function() {
       $('#admin').hover(
         function() {
           $('#etc-nav').fadeOut(600);
+          $('#tools-nav').fadeOut(600);
           $('#events-nav').fadeOut(600);
           $('#admin-nav').fadeIn(600);
         },
@@ -284,6 +285,7 @@ $(document).ready(function() {
       $('#etc').hover(
         function() {
           $('#admin-nav').fadeOut(600);
+          $('#tools-nav').fadeOut(600);
           $('#events-nav').fadeOut(600);
           $('#etc-nav').fadeIn(600);
         },
@@ -298,15 +300,35 @@ $(document).ready(function() {
           );
         }
       );
+      $('#tools').hover(
+        function() {
+          $('#admin-nav').fadeOut(600);
+          $('#etc-nav').fadeOut(600);
+          $('#events-nav').fadeOut(600);
+          $('#tools-nav').fadeIn(600);
+        },
+        function() {
+          $('#tools-nav').hover(
+            function() {
+              $('#tools-nav').css('display', 'block');
+            },
+            function() {
+              $('#tools-nav').fadeOut(600);
+            }
+          );
+        }
+      );
       $('.hide').hover(
         function() {
           $('#admin-nav').fadeOut(600);
           $('#etc-nav').fadeOut(600);
           $('#events-nav').fadeOut(600);
+          $('#tools-nav').fadeOut(600);
         },
         function() {
           $('#admin-nav').fadeOut(600);
           $('#etc-nav').fadeOut(600);
+          $('#tools-nav').fadeOut(600);
           $('#events-nav').fadeOut(600);
         });
         $('#events').hover(
@@ -314,6 +336,7 @@ $(document).ready(function() {
             $('#admin-nav').fadeOut(600);
             $('#etc-nav').fadeOut(600);
             $('#events-nav').fadeIn(600);
+            $('#tools-nav').fadeOut(600);
           },
           function() {
             $('#events-nav').hover(
@@ -432,6 +455,7 @@ window.addEventListener('popstate', function(e) {
     $('#admin').hover(
       function() {
         $('#etc-nav').fadeOut(600);
+        $('#tools-nav').fadeOut(600);
         $('#events-nav').fadeOut(600);
         $('#admin-nav').fadeIn(600);
       },
@@ -449,6 +473,7 @@ window.addEventListener('popstate', function(e) {
     $('#etc').hover(
       function() {
         $('#admin-nav').fadeOut(600);
+        $('#tools-nav').fadeOut(600);
         $('#events-nav').fadeOut(600);
         $('#etc-nav').fadeIn(600);
       },
@@ -463,15 +488,35 @@ window.addEventListener('popstate', function(e) {
         );
       }
     );
+    $('#tools').hover(
+      function() {
+        $('#admin-nav').fadeOut(600);
+        $('#etc-nav').fadeOut(600);
+        $('#events-nav').fadeOut(600);
+        $('#tools-nav').fadeIn(600);
+      },
+      function() {
+        $('#etc-nav').hover(
+          function() {
+            $('#tools-nav').css('display', 'block');
+          },
+          function() {
+            $('#tools-nav').fadeOut(600);
+          }
+        );
+      }
+    );
     $('.hide').hover(
       function() {
         $('#admin-nav').fadeOut(600);
         $('#etc-nav').fadeOut(600);
         $('#events-nav').fadeOut(600);
+        $('#tools-nav').fadeOut(600);
       },
       function() {
         $('#admin-nav').fadeOut(600);
         $('#etc-nav').fadeOut(600);
+        $('#tools-nav').fadeOut(600);
         $('#events-nav').fadeOut(600);
       });
       $('#events').hover(
@@ -479,6 +524,7 @@ window.addEventListener('popstate', function(e) {
           $('#admin-nav').fadeOut(600);
           $('#etc-nav').fadeOut(600);
           $('#events-nav').fadeIn(600);
+          $('#tools-nav').fadeOut(600);
         },
         function() {
           $('#events-nav').hover(
@@ -899,6 +945,7 @@ function anime_false_click() {
 $('#admin').hover(
   function() {
     $('#etc-nav').fadeOut(600);
+    $('#tools-nav').fadeOut(600);
     $('#events-nav').fadeOut(600);
     $('#admin-nav').fadeIn(600);
   },
@@ -916,6 +963,7 @@ $('#admin').hover(
 $('#etc').hover(
   function() {
     $('#admin-nav').fadeOut(600);
+    $('#tools-nav').fadeOut(600);
     $('#events-nav').fadeOut(600);
     $('#etc-nav').fadeIn(600);
   },
@@ -935,17 +983,38 @@ $('.hide').hover(
     $('#admin-nav').fadeOut(600);
     $('#etc-nav').fadeOut(600);
     $('#events-nav').fadeOut(600);
+    $('#tools-nav').fadeOut(600);
   },
   function() {
     $('#admin-nav').fadeOut(600);
     $('#etc-nav').fadeOut(600);
+    $('#tools-nav').fadeOut(600);
     $('#events-nav').fadeOut(600);
   });
+  $('#tools').hover(
+    function() {
+      $('#admin-nav').fadeOut(600);
+      $('#etc-nav').fadeOut(600);
+      $('#events-nav').fadeOut(600);
+      $('#tools-nav').fadeIn(600);
+    },
+    function() {
+      $('#etc-nav').hover(
+        function() {
+          $('#etc-nav').css('display', 'block');
+        },
+        function() {
+          $('#etc-nav').fadeOut(600);
+        }
+      );
+    }
+  );
   $('#events').hover(
     function() {
       $('#admin-nav').fadeOut(600);
       $('#etc-nav').fadeOut(600);
       $('#events-nav').fadeIn(600);
+      $('#tools-nav').fadeOut(600);
     },
     function() {
       $('#events-nav').hover(

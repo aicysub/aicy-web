@@ -95,6 +95,16 @@ header_register_callback(function(){
                     </a>
               </div>
               </div>
+              <div class="navbar-item has-dropdown is-hoverable">
+              
+              <a class="navbar-link" id="tools" href="/tools/">
+              <i class="fa-solid fa-hammer"></i>  ツール <i class="fa-solid fa-caret-down down"></i></a>
+            <div class="navbar-dropdown" id="tools-nav">
+            <a class="navbar-item" href="https://aic-group.sytes.net/tools/convert/"><i class="fa-solid fa-file-music"></i>  mp3変換ツール</a>
+            <a class="navbar-item" href="https://aic-group.sytes.net/tools/ip/"><i class="fa-solid fa-file"></i>  IPアドレスチェッカー</a>
+            <a class="navbar-item" href="https://aic-group.sytes.net/tools/youtube/"><i class="fa-solid fa-file-video"></i>  動画ダウンロードツール</a>
+              </div>
+              </div>
             <div class="navbar-item has-dropdown is-hoverable">
               <p class="navbar-link" id="etc">
               <i class="fa-solid fa-circle-ellipsis"></i> その他 <i class="fa-solid fa-caret-down down"></i>

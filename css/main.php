@@ -162,12 +162,13 @@ h5,
 h6,
 p,
 span,
-i,
 .title,
 ul {
   color: var(--main-text);
 }
-
+i {
+ color: var(--accent);
+}
 a {
   color: #6073ca;
 }
@@ -208,6 +209,7 @@ a.navbar-item:hover,
   color: #fff;
   transform: scale(1.05);
   text-decoration: underline;
+  outline: 1px solid var(--border-color);
 }
 
 a.navbar-item:hover i,
@@ -277,8 +279,9 @@ button.is-primary.is-hovered,
 .fa-solid,
 .fas,
 .fa-brands,
-.fab {
-  margin-right: 5px;
+.fab,
+.fa-duotone {
+  margin-right: 8px;
   -moz-text-shadow: 1px 2px 0px rgba(190, 190, 190, 1);
   -webkit-text-shadow: 1px 2px 0px rgba(190, 190, 190, 1);
   -ms-text-shadow: 1px 2px 0px rgba(190, 190, 190, 1);
@@ -2096,7 +2099,7 @@ display: none;
 .search p {
   font-size: 18px;
 }
-i::before {
+i::before,i::after {
   display: inline-block;
 }
 pre code.hljs {
