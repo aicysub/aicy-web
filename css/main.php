@@ -1004,8 +1004,7 @@ button:focus {
   content: \'\f0da\';
   padding: 0 .2em;
   color: var(--border-color);
-  ;
-  font-family: "Font Awesome 5 Free";
+  font-family: "Font Awesome 6 Pro";
   font-weight: 900;
 }
 

@@ -6,13 +6,12 @@ header_register_callback(function(){
 <!DOCTYPE html>
 <html lang="ja-JP">
 <head>
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <meta charset="utf-8"/>
 <link rel="stylesheet" href="/css/preload.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
     <script src="https://twemoji.maxcdn.com/2/twemoji.min.js?12.0.0"></script>
     <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.min.js" defer></script>
-    <link rel="icon" type="image/gif" href="/favicon.gif">
+    <link rel="icon" href="/favicon.ico">
       </head>
 <body>
 <div id="loadings" style="display:none;"></div>
