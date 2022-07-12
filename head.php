@@ -100,8 +100,9 @@ header_register_callback(function(){
               <a class="navbar-link" id="tools" href="/tools/">
               <i class="fa-solid fa-hammer"></i>  ツール <i class="fa-solid fa-caret-down down"></i></a>
             <div class="navbar-dropdown" id="tools-nav">
-            <a class="navbar-item" href="https://aic-group.sytes.net/tools/convert/"><i class="fa-solid fa-file-music"></i>  mp3変換ツール</a>
-            <a class="navbar-item" href="https://aic-group.sytes.net/tools/ip/"><i class="fa-solid fa-file"></i>  IPアドレスチェッカー</a>
+            <a class="navbar-item" href="/tools/ip/"><i class="fa-solid fa-file"></i>  IPアドレスチェッカー</a>
+                    <hr class="navbar-divider">
+                    <a class="navbar-item" href="/tools/convert/"><i class="fa-solid fa-file-music"></i>  mp3変換ツール</a>
             <a class="navbar-item" href="https://aic-group.sytes.net/tools/youtube/"><i class="fa-solid fa-file-video"></i>  動画ダウンロードツール</a>
               </div>
               </div>
@@ -115,9 +116,6 @@ header_register_callback(function(){
                     <img src="/favicon.ico" class="icon-img" width="53">あいしぃーのサーバーについて
                     </a>
                     <hr class="navbar-divider">
-                    <a class="navbar-item" href="https://aic-group.sytes.net/youtube/" id="youtube">
-                      <i class="fas fa-arrow-alt-circle-down"></i>  YouTube ダウンローダー
-</a>
                 <a class="navbar-item" href="/unei/">
                     <i class="fa-solid fa-flag"></i>  運営になる
                 </a>
