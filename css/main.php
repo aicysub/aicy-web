@@ -521,7 +521,10 @@ a {
   margin-left: 20%;
   margin-right: 20%;
   font-size: 1.3em;
-  padding: 3%;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 30px;
+  padding-bottom: 30px;
   animation: up 1.5s ease;
   color: var(--main-text);
 }
@@ -748,7 +751,7 @@ a:hover span {
 
 .download {
   box-shadow: var(--shadow);
-  border-radius: 18px;
+  border-radius: 5000px;
   background: #f8f8f8;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -2105,6 +2108,17 @@ pre code.hljs {
 .emoji {
   width: 1em;
   margin-bottom: -3px;
+}
+.whoisarea {
+  border-radius: 2em;
+  border: var(--border);
+  box-shadow: var(--shadow);
+  background: var(--modal);
+  font-size: 14px;
+  padding: 20px;
+  max-height: 600px;
+  overflow: auto;
+  text-align: left;
 }
   ';
 if(!isset($_GET['original'])){

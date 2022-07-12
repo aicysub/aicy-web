@@ -979,3 +979,10 @@ $('input[name=search]').keypress(function(e) {
     search();
   }
 });
+function whois() {
+  var ip = $('input[name=whois-input]').val();
+  $('p#whoisarea').load('/tools/whois?ip=' + ip + '', function() {
+    $('p#whois-messeage').text('検索結果');
+    $('p#whoisarea').fadeIn(600);
+  });
+}
