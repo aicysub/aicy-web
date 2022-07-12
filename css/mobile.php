@@ -313,6 +313,9 @@ $original_css = '@keyframes scroll {
 .search a{
     font-size: 14px;
 }
+.bread {
+    position: unset;
+}
   ';
 if(!isset($_GET['original'])){
     $css_replaces = [];

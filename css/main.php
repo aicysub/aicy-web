@@ -171,6 +171,7 @@ i {
 }
 a {
   color: #6073ca;
+  font-weight: 900;
 }
 
 .navbar {
@@ -315,7 +316,7 @@ button.is-primary.is-hovered,
   position: relative;
   padding: 1rem 2rem;
   border-bottom: 6px solid #b27954;
-  box-shadow: var(--shadow);
+  box-shadow: var(--hover-shadow);
   font-family: HeadingFonts;
   margin-top: 30px;
   text-align: center;
@@ -748,7 +749,7 @@ a:hover span {
 .contents a {
   display: inline-block;
   white-space: nowrap;
-  margin-right: 1.5%;
+  margin-right: 8px;
   font-weight: 900;
 }
 
@@ -997,7 +998,12 @@ button:focus {
 }
 
 .box .h2 {
-  background: var(--border-color);
+  background: var(--accent);
+  margin-top: 0;
+  margin-left: 0;
+  margin-right: 0;
+  border-radius: 5000px;
+  border-bottom: none;
 }
 
 .bread li {
@@ -2082,7 +2088,7 @@ display: none;
 .fixed {
   position: sticky;
   top: 80px;
-  z-index: 500;
+  z-index: 4;
   background: var(--nav-background);
   backdrop-filter: saturate(180%) blur(20px);
 }
@@ -2122,6 +2128,50 @@ pre code.hljs {
   max-height: 600px;
   overflow: auto;
   text-align: left;
+}
+ul li::before {
+  content: "\e122";
+  font-family: "Font Awesome 6 Pro";
+  font-weight: 400;
+  margin-right: 10px;
+  color: var(--accent);
+}
+.preference-list li::before,.preference-img li::before {
+  content: "";
+  margin-right: 0px;
+}
+.toc-help {
+margin: auto;
+background: var(--modal);
+padding: 50px;
+border: var(--border);
+margin-bottom: 30px;
+border-radius: 2em;
+box-shadow: var(--hover-shadow);
+}
+.toc-help h2 {
+  border-bottom: 3px solid var(--accent);
+  padding-bottom: 3px;
+  width: 8em;
+  margin: auto;
+  text-align: center;
+}
+.toc-help a {
+  display: contents;
+}
+.toc-help li {
+  display: flex;
+}
+.toc-help a::after {
+  display: none;
+}
+.toc-fixed {
+  display: none;
+  position: fixed;
+  left: 20px;
+  z-index: 400;
+  top: 200px;
+  font-size: 1.3em;
 }
   ';
 if(!isset($_GET['original'])){

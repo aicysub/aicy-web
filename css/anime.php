@@ -57,13 +57,11 @@ $original_css = '
 
 @keyframes up {
   from {
-    opacity: 0.5;
-    transform: translateY(100px);
+    opacity: 0;
   }
 
   to {
     opacity: 1;
-    transform: translateY(initial);
   }
 }
 
@@ -186,7 +184,8 @@ $original_css = '
 
 .navbar,
 .bread,
-.fixed {
+.fixed,
+.toc-fixed {
   transition: .5s ease;
 }
 

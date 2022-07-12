@@ -17,6 +17,7 @@ $original_css = ':root {
    --site-background: #222224;
    --nav-background: #2324254a;
    --button-background: #515254;
+   --accent: #9C6963;
    --shadow: 0 22px 70px 4px rgba(0, 0, 0, 0.56);
 }
  
@@ -160,6 +161,9 @@ $original_css = ':root {
    text-shadow: 1px 1px 0 #906862, -1px -1px 0 #906862, -1px 1px 0 #906862, 1px -1px 0 #906862, 0 1px 0 #906862, 0-1px 0 #906862, -1px 0 0 #906862, 1px 0 0 #906862
  }
  
+ .box .h2 {
+   text-shadow: 1px 1px 0 var(--background-primary),-1px -1px 0 var(--background-primary),-1px 1px 0 var(--background-primary),1px -1px 0 var(--background-primary),0 1px 0 var(--background-primary),0-1px 0 var(--background-primary),-1px 0 0 var(--background-primary),1px 0 0 var(--background-primary);
+ }
  .h2 p {
    color: #F1F1F1;
  }

@@ -132,19 +132,6 @@ function lazyLoadScript(scriptSrc) {
     }
   }
 }
-$(function() {
-  $("a[href^='#']").click(function() {
-    var $parent = $(this).closest('.container');
-    var $index = $("button", $parent).index(this);
-    var $box = $(".scroll", $parent);
-    var $tareget = $("p", $box).eq($index);
-    var dist = $tareget.position().top - $box.position().top;
-    console.log("target:" + $tareget.position().top + " ,$box:" + $box.position().top);
-    $box.stop().animate({
-      scrollTop: $box.scrollTop() + dist
-    });
-  });
-});
 
 /*! loadCSS. [c]2020 Filament Group, Inc. MIT License */
 (function(w) {
@@ -256,8 +243,10 @@ $(document).ready(function() {
     $('input[name=search]').val('');
     var nextPage = $(this).attr('href');
     $('.contents').fadeOut(600);
+    $('.toc-fixed').fadeOut(600);
     setTimeout(function() {
-      $('.contents').load(nextPage + ' .contents');
+    $('.toc-fixed').remove();
+    $('.contents').load(nextPage + ' .contents');
       $('.navbar-start').load(nextPage + ' .navbar-start');
       history.pushState(null, null, nextPage);
     }, 600);
@@ -859,11 +848,14 @@ $(document).ready(function() {
         var navcp = $(this).scrollTop();
         if (navlp < navcp) {
           $sticky.css('top', '-200px');
+          $('.toc-fixed').css('top', '200px');
           $('.bread').css('top', '40px');
           $('.fixed').css('top', '20px');
+          $('.toc-fixed').fadeIn(600);
         } else if (navlp > navcp) {
           $sticky.css('top', '0');
           $('.fixed').css('top', '80px');
+          $('.toc-fixed').css('top', '205px');
           $('.bread').css('top', '100px');
         }
         navlp = navcp;
@@ -1055,3 +1047,14 @@ function whois() {
     $('p#whoisarea').fadeIn(600);
   });
 }
+$(function(){
+  $('a[href^="#"]').on('click', function() {
+    const speed = 350;
+    const href = $(this).attr("href");
+    const target = $(href == "#" || href == "" ? "html" : href);
+    const position = target.offset().top - 170;
+    
+    $("html, body").animate({ scrollTop: position }, speed, "swing");
+    return false;
+  });
+});

@@ -35,7 +35,7 @@ header_register_callback(function(){
           <div class="navbar-start">
             <?php  
             $location = $_SERVER['SCRIPT_NAME'];
-            $url = str_replace('.php', '', $location);
+            $url = str_replace('.php', '//', $location);
             $url = str_replace('index.php', '', $location);
             ?>
           <a class="navbar-item" id="setup" onclick="setup()">

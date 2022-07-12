@@ -16,10 +16,6 @@ $original_css = ':root {
     --button-background: linear-gradient(to right, #fc466b, #3f5efb);
   }
   
-  .h2 {
-    background: var(--background-secondary) !important;
-  }
-  
   a {
     color: #FFEB3B;
     font-weight: 900;
@@ -44,7 +40,6 @@ $original_css = ':root {
   }
   
   .h2 {
-    font-size: 2em;
     font-family: HeadingFonts;
     width: 50%;
     margin: auto;
@@ -60,8 +55,14 @@ $original_css = ':root {
   }
   
   .box .h2 {
-    width: 80%;
-  }
+    background: var(--accent);
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+    border-radius: 5000px;
+    border-bottom: none;
+    width: 100%;  
+}
   
   .name-list:hover {
     background-color: initial;
