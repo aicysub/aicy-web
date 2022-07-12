@@ -105,7 +105,7 @@ display: none;
   </div>
     <div class="preference-end" id="setup-3-end">
     <p class="preference-etc" id="next-1" onclick="$('#setup-3').fadeOut(1000);$('#setup-3-end').fadeOut(1000); setTimeout(function(){$('#setup-2').fadeIn(1000);$('#setup-2-end').fadeIn(1000);$('#setup-2-end').css('display','flex'); $('.preference-title').text('セットアップ - 表示設定');},999)">前にもどる</p>
-    <p class="preference-submit" id="config-etc" onclick="setup_finish(); document.cookie = 'config=true; path=/;' expires=Fri, 31-Dec-2038 23:59:59 JST;;">ほかの設定を変更</p>
+    <p class="preference-submit" id="config-etc" onclick="setup_finish(); document.cookie = 'config=true; path=/; expires=Fri, 31-Dec-2038 23:59:59 JST;';">ほかの設定を変更</p>
   </div>
   <div class="preference-main" id="setup-4">
   <div id="loadings" style="margin: auto;position: relative;margin-top: 2%;"></div>
