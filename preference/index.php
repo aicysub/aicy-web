@@ -107,7 +107,7 @@ if (isset($_COOKIE['anime'])){
     <label for="dark">スペシャル</label></p>  </li>
   </ul>
     <p id="saved">設定を保存しました。</p>
-    <a href="/help/themes/" onclick="preference_close()">テーマとは？</p>
+    <a href="/help/themes/" onclick="preference_close()">テーマとは？</a>
 <p>変更した設定は、あとからいつでも変更できます。</p>
   </div>
     <div class="preference-end" id="preference-themes-end">

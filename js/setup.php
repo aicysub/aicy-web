@@ -265,4 +265,89 @@ if ((strpos($ua, 'Android') !== false) && (strpos($ua, 'Mobile') !== false) || (
         },999);
     }
             ";
+            echo "
+            function amazon_modal() {
+                $('.modals').load('/tools/amazon-modal/?v=".date('Y-m-d.h')." .preference-modal'); 
+                ";
+                $ua = $_SERVER['HTTP_USER_AGENT'];
+                if ((strpos($ua, 'Android') !== false) && (strpos($ua, 'Mobile') !== false) || (strpos($ua, 'iPhone') !== false) || (strpos($ua, 'Windows Phone') !== false)) {
+                    // スマートフォンからアクセスされた場合
+                    echo '$(".navbar").fadeOut();
+                    $(".footers").fadeOut(); 
+                    setTimeout(function(){
+                        $(".preference-main").css("height","calc("+window.innerHeight+"px - 175px"); 
+                        $("#setup-3").css("display","none");
+                        $("#preference-list").css("padding-top",""+$(".preference-contents").height() / 4+"px"); 
+                        $("#preference-list").css("padding-bottom",""+$(".preference-contents").height() / 4+"px"); 
+                        $(".preference").css("top","0");
+                    },300);
+                          ';
+                } elseif ((strpos($ua, 'Android') !== false) || (strpos($ua, 'iPad') !== false)) {
+                    echo '$(".navbar").fadeOut();
+                    $(".footers").fadeOut(); 
+                    setTimeout(function(){
+                        $(".preference-main").css("height","calc("+window.innerHeight+"px - 175px"); 
+                        $("#setup-3").css("display","none");
+                        $("#preference-list").css("padding-top",""+$(".preference-contents").height() / 4+"px"); 
+                        $("#preference-list").css("padding-bottom",""+$(".preference-contents").height() / 4+"px"); 
+                        $(".preference").css("top","0");
+                    },300);
+                          ';
+                } elseif ((strpos($ua, 'DoCoMo') !== false) || (strpos($ua, 'KDDI') !== false) || (strpos($ua, 'SoftBank') !== false) || (strpos($ua, 'Vodafone') !== false) || (strpos($ua, 'J-PHONE') !== false)) {
+                    echo '$(".navbar").fadeOut();
+                    $(".footers").fadeOut(); 
+                    setTimeout(function(){
+                        $(".preference-main").css("height","calc("+window.innerHeight+"px - 175px"); 
+                        $("#setup-3").css("display","none");
+                        $("#preference-list").css("padding-top",""+$(".preference-contents").height() / 4+"px"); 
+                        $("#preference-list").css("padding-bottom",""+$(".preference-contents").height() / 4+"px"); 
+                        $(".preference").css("top","0");
+                    },300);
+                          ';  
+                }
+                echo "
+                $('.bread').css('opacity','0');  
+                $('a').css('pointer-events', 'none').attr('tabindex', -1);
+                $('.navbar-dropdown').css('display', 'none').attr('tabindex', -1);
+                $('.modals').fadeIn(1000); 
+                window.scroll({top: 0, behavior: 'smooth'});
+                $('.footers').css('bottom', '-200px');
+                setTimeout(function(){
+                  $('.modals').fadeIn(1000); 
+              },2500);
+              setTimeout(function(){
+              $( '.preference-modal' ).draggable( {
+            containment: '#modals',
+                scroll: false,
+            } );
+            ";
+            echo '        checkWidth = function(){
+              var browserWidth = $(window).width();
+              var boxW = $(".preference-modal").width();
+              var plusPxW = ((browserWidth - boxW)/2);
+              $(".preference-modal").css({"left": plusPxW + "px"});
+          };
+           
+          checkHeight = function(){
+              var browserHeight = $(window).height();
+              var boxH = $(".preference-modal").height();
+              var plusPxH = ((browserHeight - boxH)/2);
+              $(".preference-modal").css({"top": plusPxH - 70 + "px"});
+          };
+          $(function(){
+              checkWidth();
+              $(window).resize(checkWidth);
+          });
+           
+          $(function(){
+              checkHeight();
+              $(window).resize(checkHeight);
+          });';
+            echo "
+            },190);
+                setTimeout(function(){
+                $('.footers').css('bottom', '-200px');
+                },800);
+              }
+            ";
         ?>

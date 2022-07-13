@@ -1058,3 +1058,15 @@ $(function(){
     return false;
   });
 });
+
+function amazon_search() {
+  var value = $('input[name=amazon-search]').val();
+  if (value === '') {
+    $('p#moji').fadeIn(600);
+    setTimeout(function() {
+      $('p#moji').fadeOut(600);
+    }, 2000);
+    return false;
+  };
+  window.open('https://www.amazon.co.jp/s?k='+value+'&tag=as0e91-22&emi=AN1VRQENFRJN5', '_blank');
+}

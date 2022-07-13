@@ -104,6 +104,8 @@ header_register_callback(function(){
                     <hr class="navbar-divider">
                     <a class="navbar-item" href="/tools/convert/"><i class="fa-solid fa-file-music"></i>  mp3変換ツール</a>
             <a class="navbar-item" href="https://aic-group.sytes.net/tools/youtube/"><i class="fa-solid fa-file-video"></i>  動画ダウンロードツール</a>
+            <hr class="navbar-divider">
+            <a class="navbar-item" href="/tools/amazon/"><i class="fa-brands fa-amazon"></i>  Amazon検索ツール</a>
               </div>
               </div>
             <div class="navbar-item has-dropdown is-hoverable">
