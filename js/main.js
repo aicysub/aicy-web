@@ -31,16 +31,6 @@ $(function() {
     });
   }
 });
-window.addEventListener("mousewheel", e => {
-  {
-    passive: false
-  }
-  if (e.deltaX === 0) {
-    e.stopPropagation()
-    e.preventDefault()
-    window.scrollBy(e.deltaY, 0)
-  }
-})
 $(function() {
   var topBtn = $('#page_top');
   topBtn.hide();
@@ -305,7 +295,7 @@ $(document).ready(function() {
           );
         }
       );
-      $('.hide').hover(
+      $('.contents').hover(
         function() {
           $('#admin-nav').fadeOut(600);
           $('#etc-nav').fadeOut(600);
@@ -493,7 +483,7 @@ window.addEventListener('popstate', function(e) {
         );
       }
     );
-    $('.hide').hover(
+    $('.contents').hover(
       function() {
         $('#admin-nav').fadeOut(600);
         $('#etc-nav').fadeOut(600);
@@ -846,7 +836,7 @@ $(document).ready(function() {
         var navcp = $(this).scrollTop();
         if (navlp < navcp) {
           $sticky.css('top', '-200px');
-          $('.toc-fixed').css('top', '200px');
+          $('.toc-fixed').css('top', '130px');
           $('.bread').css('top', '40px');
           $('.fixed').css('top', '20px');
           $('.toc-fixed').fadeIn(600);
@@ -968,7 +958,7 @@ $('#etc').hover(
     );
   }
 );
-$('.hide').hover(
+$('.contents').hover(
   function() {
     $('#admin-nav').fadeOut(600);
     $('#etc-nav').fadeOut(600);

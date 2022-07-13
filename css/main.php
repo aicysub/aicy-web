@@ -2151,7 +2151,7 @@ box-shadow: var(--hover-shadow);
   left: 20px;
   z-index: 400;
   top: 200px;
-  font-size: 1.3em;
+  font-size: 20px;
 }
   ';
 if(!isset($_GET['original'])){
