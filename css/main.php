@@ -54,10 +54,6 @@ body {
   display: none;
 }
 
-.cotents .a:hover {
-  transform: scale(1.05);
-}
-
 html {
   background-color: #FFFFFF;
 }
@@ -68,17 +64,6 @@ br {
 
 *:focus {
   outline: 3px solid var(--focus) !important;
-}
-
-a:hover .contents {
-  opacity: 0;
-}
-
-img {
-  image-rendering: -webkit-optimize-contrast;
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
-  -webkit-transform: translateZ(0);
 }
 
 *::-webkit-scrollbar {
@@ -839,11 +824,6 @@ a.link-a:hover {
   z-index: 500;
   margin-right: 15px;
   margin-bottom: 15px;
-}
-
-.top:hover {
-  transform: rotate(30deg);
-  background: #e98fa0;
 }
 
 .top .fa-solid,
@@ -1875,7 +1855,7 @@ label {
   width: 100%;
   height: 100%;
   position: fixed;
-  top: 0;
+  top: 70px;
   left: 0;
   backdrop-filter: blur(20px);
   display: none;

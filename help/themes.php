@@ -40,6 +40,14 @@
 <li><a href="#ダークテーマとは？">ダークテーマとは？</a></li>
 <li><a href="#スペシャルテーマとは？">スペシャルテーマとは？</a></li>
 </ul>
+<ul class="toc-help toc-fixed" style="width: 16.6em;">
+<h2>もくじ</h2>
+<br>
+<li><a href="#テーマの紹介">テーマの紹介</a></li>
+<li><a href="#ホワイトテーマとは？">ホワイトテーマとは？</a></li>
+<li><a href="#ダークテーマとは？">ダークテーマとは？</a></li>
+<li><a href="#スペシャルテーマとは？">スペシャルテーマとは？</a></li>
+</ul>
 <h2 class="title h2" id="テーマの紹介">テーマの紹介</h2>
 <p style="text-align:center;">あいしぃーのサイト内におけるテーマは<br><br>
 <ul style="width: 10em;margin: auto;"><li>ホワイトテーマ</li><li>ダークテーマ</li><li>スペシャルテーマ</li></ul>
@@ -70,17 +78,9 @@
 スペシャルテーマは比較的最近に追加されたテーマで、<br>
 <a href="https://aic-group.sytes.net/news/2022-07-07/" target="_blank">あいしぃーの誕生日を祝って</a><b title="2022/07/07" style="border-bottom: 2px solid var(--accent);font-size: 100;font-weight: normal;">2022年の七夕の日</b>に追加されました。
 <br><br>
-特徴は。ピンク色から青色へのグラーデーションをメインに扱っているテーマで、<br>
+特徴は、ピンク色から青色へのグラーデーションをメインに扱っているテーマで、<br>
 ダークテーマを基盤としてデザインされているテーマです。
 </div>
 <br><br>
-</div></div>
+</div>
 
-<ul class="toc-help toc-fixed" style="width: 16.6em;">
-<h2>もくじ</h2>
-<br>
-<li><a href="#テーマの紹介">テーマの紹介</a></li>
-<li><a href="#ホワイトテーマとは？">ホワイトテーマとは？</a></li>
-<li><a href="#ダークテーマとは？">ダークテーマとは？</a></li>
-<li><a href="#スペシャルテーマとは？">スペシャルテーマとは？</a></li>
-</ul>

@@ -144,7 +144,6 @@ header_register_callback(function(){
       <p style="cursor:pointer;" onclick="window.scroll({top: 0, behavior: 'smooth'})" id="page_top" class="top">
         <i class="fa-solid fa-arrow-turn-up"></i>
 </p>
-<div class="hide" style="top: 0;right: 0;bottom: 0;left: 0;z-index: 100;opacity: 1;">
      <?php
      date_default_timezone_set('asia/tokyo'); clearstatcache(); 
      $main_js_v = "?v=".date("Y-m-d.h")."";

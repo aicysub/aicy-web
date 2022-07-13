@@ -243,9 +243,7 @@ $(document).ready(function() {
     $('input[name=search]').val('');
     var nextPage = $(this).attr('href');
     $('.contents').fadeOut(600);
-    $('.toc-fixed').fadeOut(600);
     setTimeout(function() {
-    $('.toc-fixed').remove();
     $('.contents').load(nextPage + ' .contents');
       $('.navbar-start').load(nextPage + ' .navbar-start');
       history.pushState(null, null, nextPage);
@@ -1047,8 +1045,7 @@ function whois() {
     $('p#whoisarea').fadeIn(600);
   });
 }
-$(function(){
-  $('a[href^="#"]').on('click', function() {
+$(document).on('click', 'a[href^="#"]', function() {
     const speed = 350;
     const href = $(this).attr("href");
     const target = $(href == "#" || href == "" ? "html" : href);
@@ -1057,7 +1054,6 @@ $(function(){
     $("html, body").animate({ scrollTop: position }, speed, "swing");
     return false;
   });
-});
 
 function amazon_search() {
   var value = $('input[name=amazon-search]').val();
