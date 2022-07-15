@@ -31,14 +31,15 @@ $(function() {
     });
   }
 });
+
 $(function() {
   var topBtn = $('#page_top');
   topBtn.hide();
   $(window).scroll(function() {
     if ($(this).scrollTop() > 80) {
-      topBtn.fadeIn("slow");
+      topBtn.fadeIn(600);
     } else {
-      topBtn.fadeOut("slow");
+      topBtn.fadeOut(600);
     }
   });
 });
@@ -840,11 +841,13 @@ $(document).ready(function() {
           $('.bread').css('top', '40px');
           $('.fixed').css('top', '20px');
           $('.toc-fixed').fadeIn(600);
+          $('.top').css('bottom','0');
         } else if (navlp > navcp) {
           $sticky.css('top', '0');
           $('.fixed').css('top', '80px');
           $('.toc-fixed').css('top', '205px');
           $('.bread').css('top', '100px');
+          $('.top').css('bottom','150px');
         }
         navlp = navcp;
       });
@@ -1055,4 +1058,52 @@ function amazon_search() {
     return false;
   };
   window.open('https://www.amazon.co.jp/s?k='+value+'&tag=as0e91-22&emi=AN1VRQENFRJN5', '_blank');
+}
+function setaccent_blue() {
+  $('link[href^="/css/pink/"]').remove();
+  $('link[href^="/css/blue/"]').remove();
+  document.cookie = 'blue=true; path=/; expires=Fri, 31-Dec-2038 23:59:59 JST';
+  document.cookie = 'pink=; max-age=0; path=/;';
+  $('#accent_blue').addClass('preference-img-selected');
+  $('#accent_brown').removeClass('preference-img-selected');
+  $('#accent_pink').removeClass('preference-img-selected');
+  loadCSS('/css/blue/', document.getElementById('loadcss'));
+  setTimeout(function() {
+    $('#saved').css('opacity', '1');
+  }, 400);
+  setTimeout(function() {
+    $('#saved').css('opacity', '0');
+  }, 3000);
+}
+function setaccent_pink() {
+  $('link[href^="/css/pink/"]').remove();
+  $('link[href^="/css/blue/"]').remove();
+  document.cookie = 'pink=true; path=/; expires=Fri, 31-Dec-2038 23:59:59 JST';
+  document.cookie = 'blue=; max-age=0; path=/;';
+  $('#accent_pink').addClass('preference-img-selected');
+  $('#accent_blue').removeClass('preference-img-selected');
+  $('#accent_brown').removeClass('preference-img-selected');
+  loadCSS('/css/pink/', document.getElementById('loadcss'));
+  setTimeout(function() {
+    $('#saved').css('opacity', '1');
+  }, 400);
+  setTimeout(function() {
+    $('#saved').css('opacity', '0');
+  }, 3000);
+}
+function setaccent_brown() {
+  $('link[href^="/css/pink/"]').remove();
+  $('link[href^="/css/blue/"]').remove();
+  $('#accent_blue').removeClass('preference-img-selected');
+  $('#accent_pink').removeClass('preference-img-selected');
+  $('#accent_brown').addClass('preference-img-selected');
+  document.cookie = 'brown=true; path=/; expires=Fri, 31-Dec-2038 23:59:59 JST';
+  document.cookie = 'pink=; max-age=0; path=/;';
+  document.cookie = 'blue=; max-age=0; path=/;';
+  setTimeout(function() {
+    $('#saved').css('opacity', '1');
+  }, 400);
+  setTimeout(function() {
+    $('#saved').css('opacity', '0');
+  }, 3000);
 }

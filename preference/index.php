@@ -14,6 +14,15 @@ if (isset($_COOKIE['anime'])){
 } else {
   $anime_false_select_status = "preference-img-selected";
 }
+if (isset($_COOKIE['brown'])){
+  $brown_select_status = "preference-img-selected";
+}
+if (isset($_COOKIE['blue'])){
+  $blue_select_status = "preference-img-selected";
+}
+if (isset($_COOKIE['pink'])){
+  $pink_select_status = "preference-img-selected";
+}
 ?>
 <div class="preference-modal">
   <style>
@@ -57,7 +66,7 @@ if (isset($_COOKIE['anime'])){
           var browserHeight = $(window).height();
           var boxH = $(".preference-modal").height();
           var plusPxH = ((browserHeight - boxH)/2);
-          $(".preference-modal").css({"top": plusPxH - 70 + "px"});
+          $(".preference-modal").css({"top": plusPxH - 130 + "px"});
       };
       $(function(){
           checkWidth();
@@ -92,7 +101,6 @@ if (isset($_COOKIE['anime'])){
 <div id="loadings" style="margin: auto;position: relative;margin-top: 2%;display: none;"></div>
 <div class="preference-main" id="preference-themes">
   <p class="preference-main-title">テーマ設定</p><br>
-
   <ul class="preference-img">   
   <li><label for="white" onclick="white_click()" ><img id="white-img" class="<?php echo $white_select_status;?>" src="/images/white-mode.png" loading="lazy"></label>
   <p><input type="radio" name="themes" id="white" value="white">
@@ -106,6 +114,14 @@ if (isset($_COOKIE['anime'])){
     <p>     <input type="radio" name="themes" id="special" value="special">
     <label for="dark">スペシャル</label></p>  </li>
   </ul>
+  <hr>
+  <p class="preference-main-title">アクセントカラーの設定</p><br>
+  <div class="accent">
+<i class="fa-solid fa-circle <?php echo $brown_select_status;?>" id="accent_brown" onclick="setaccent_brown();" style="color:#906862;"></i> 
+<i class="fa-solid fa-circle <?php echo $blue_select_status;?>" id="accent_blue" onclick="setaccent_blue();" style="color:#1565C0;"></i>
+<i class="fa-solid fa-circle <?php echo $pink_select_status;?>" id="accent_pink" onclick="setaccent_pink();" style="color:#AD1457;"></i>
+  </div>
+  <br>
     <p id="saved">設定を保存しました。</p>
     <a href="/help/themes/" onclick="preference_close()">テーマとは？</a>
 <p>変更した設定は、あとからいつでも変更できます。</p>

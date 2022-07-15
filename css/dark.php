@@ -7,7 +7,7 @@ $original_css = ':root {
    --corsor-color: rgba(255, 255, 255, .535);
    --background-secondary: #26292B;
    --focus: rgb(100 172 255);
-   --background-primary: #252729;
+   --background-primary: #1F2021;
    --border: 2px solid #424343;
    --border-color: #424343;
    --input-background: #59595B;
@@ -52,7 +52,7 @@ $original_css = ':root {
  a.navbar-item:focus,
  a.navbar-item:focus-within,
  a.navbar-item:hover {
-   background-color: #007fd9db;
+  background-color: var(--accent);
    color: #fff
  }
  

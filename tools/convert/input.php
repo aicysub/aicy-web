@@ -1,6 +1,8 @@
 <form action="/tools/convert/upload" id="upload" method="post" enctype="multipart/form-data">
 <input class="download" name="convert_file" type="file" accept="audio/wav,video/mp4,video/webm,audio/flac,audio/ogg" required />
-<input type="submit" class="download" value="ファイルを変換する" />
+<button type="submit" class="download">
+アップロード <i class="fa-solid fa-inbox-out" style="margin-left:8px;color:#fff;"></i>
+</button>
 </form>
 <br>
 <br>

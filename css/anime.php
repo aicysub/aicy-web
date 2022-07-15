@@ -4,7 +4,7 @@ header( 'Cache-Control: post-check=0, pre-check=0', FALSE );
 header('Pragma:no-cache');
 $original_css = '
 * {
-  transition-duration: 0.3s;
+  transition-duration: 0.6s;
   transition-timing-function: ease;
   transition-property: color, transform, background-color, display, div, position, span, font-size, text-decoration, box-shadow, border-color, filter, border-radius, background-image, transform, margin, margin-top, margin-bottom, margin-right, margin-left, padding-bottom, outline;
 }
@@ -234,7 +234,9 @@ a.navbar-item,
 .contents a {
   transition: .3s;
 }
-
+.contents a::after {
+  transition: 0.6s;
+}
 @keyframes click-show-anime {
   0% {
     transform: translateY(15px);

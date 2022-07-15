@@ -316,6 +316,9 @@ $original_css = '@keyframes scroll {
 .bread {
     position: unset;
 }
+.toc-fixed {
+display: none !important;
+}
   ';
 if(!isset($_GET['original'])){
     $css_replaces = [];

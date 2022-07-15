@@ -207,7 +207,7 @@ if ((strpos($ua, 'Android') !== false) && (strpos($ua, 'Mobile') !== false) || (
           var browserHeight = $(window).height();
           var boxH = $(".preference-modal").height();
           var plusPxH = ((browserHeight - boxH)/2);
-          $(".preference-modal").css({"top": plusPxH - 70 + "px"});
+          $(".preference-modal").css({"top": plusPxH - 130 + "px"});
       };
       $(function(){
           checkWidth();

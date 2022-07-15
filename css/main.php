@@ -49,7 +49,11 @@ body {
   --nav-background: #ffffff8c;
   --button-background: #FFF;
 }
-
+*::selection {
+ background: var(--accent);
+ box-shadow: var(--shadow);
+ color: #CDCDCD;
+}
 .name-list {
   display: none;
 }
@@ -191,7 +195,7 @@ a.navbar-item:hover,
 .navbar-item.has-dropdown:hover .navbar-link,
 .navbar-dropdown a.navbar-item:focus,
 .navbar-dropdown a.navbar-item:hover {
-  background-color: #0B51CD;
+  background-color: var(--accent);
   color: #fff;
   transform: scale(1.05);
   text-decoration: underline;
@@ -300,7 +304,7 @@ button.is-primary.is-hovered,
   border-radius: 20px 20px 4px 4px;
   position: relative;
   padding: 1rem 2rem;
-  border-bottom: 6px solid #b27954;
+  border-bottom: 6px solid var(--accent);
   box-shadow: var(--hover-shadow);
   font-family: HeadingFonts;
   margin-top: 30px;
@@ -393,7 +397,7 @@ code {
 }
 
 a {
-  color: #6984ff;
+  color: var(--accent);
 }
 
 .color {
@@ -450,7 +454,7 @@ a {
   background-position: center;
   cursor: pointer;
   box-shadow: var(--shadow);
-  z-index: 300;
+  z-index: 3;
   animation: rotate 1s 0.3s infinite;
 }
 
@@ -523,17 +527,63 @@ a {
   box-shadow: var(--hover-shadow);
 }
 
-.contents a::after {
-  content: "\f35d";
+.contents a[href^="/"]::after {
+  content: "\f054";
   width: 16px;
   height: 16px;
   display: inline-block;
-  margin-left: 5px;
+  margin-left: 10px;
   font-family: "Font Awesome 6 Pro";
   font-weight: 900;
   margin-right: 1%;
+  font-size: 15px;
+  position: relative;
+  top: -3px;
 }
-
+.contents a[href^="/"]:hover:after {
+  transform: translateX(10px);
+  margin-right: 5px;
+  color: var(--focus);
+  font-size: 18px;
+  top: -2px;
+}
+.contents a[href^="#"]::after {
+  content: "\f078";
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  margin-left: 10px;
+  font-family: "Font Awesome 6 Pro";
+  font-weight: 900;
+  margin-right: 1%;
+  font-size: 15px;
+  position: relative;
+  top: 4px;
+}
+.contents a[href^="#"]:hover:after {
+  color: var(--focus);
+  font-size: 18px;
+  top: 3px;
+}
+.contents a[href^="https://"]::after,.contents a[href^="http://"]::after {
+  content: "\e2be";
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  margin-left: 10px;
+  font-family: "Font Awesome 6 Pro";
+  font-weight: 900;
+  margin-right: 1%;
+  font-size: 15px;
+  position: relative;
+  top: -4px;
+}
+.contents a[href^="https://"]:hover:after,.contents a[href^="http://"]:hover:after {
+  transform: translateX(10px);
+  color: var(--focus);
+  font-size: 18px;
+  top: -3px;
+}
 .download[type="submit"] {
   background: var(--accent);
   color: #fff;
@@ -543,7 +593,7 @@ a {
   display: none;
 }
 
-.none a::after {
+.none a[href^="/"]::after,.none a[href^="http://"]::after,.none a[href^="https://"]::after {
   display: none;
 }
 
@@ -815,22 +865,18 @@ a.link-a:hover {
 
 .top {
   position: fixed;
-  bottom: 2%;
-  background: #7759557f;
   right: 0;
   border-radius: 50%;
-  font-size: 2em;
+  font-size: 3em;
   backdrop-filter: saturate(180%) blur(20px);
   z-index: 500;
-  margin-right: 15px;
-  margin-bottom: 15px;
+  margin-right: 10px;
+  bottom: 0;
+  margin-bottom: 10px;
 }
-
-.top .fa-solid,
-.top .fas {
-  margin: 0.5em;
+.top:hover i {
+  filter: brightness(150%);
 }
-
 .text-border-1 {
   stroke-linejoin: round;
 }
@@ -916,22 +962,6 @@ button.is-primary.is-hovered,
   display: none;
 }
 
-button {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 6px 14px;
-  font-family: -apple-system, BlinkMacSystemFont, \'Roboto\', sans-serif;
-  border-radius: 6px;
-  color: #3D3D3D;
-  background: #fff;
-  border: none;
-  box-shadow: 0px 0.5px 1px rgba(0, 0, 0, 0.1);
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-}
-
 button:focus {
   box-shadow: 0px 0.5px 1px rgba(0, 0, 0, 0.1), 0px 0px 0px 3.5px rgba(58, 108, 217, 0.5);
   outline: 0;
@@ -953,7 +983,7 @@ button:focus {
   box-shadow: var(--shadow);
   position: sticky;
   top: 40px;
-  z-index: 400;
+  z-index: 4;
 }
 
 .footers {
@@ -1126,7 +1156,7 @@ input[type="file"]:hover {
 #anime-none-change-pc:hover,
 #anime-change-pc:hover,
 #config:hover {
-  background-color: #007fd9db;
+  background-color: var(--accent);
   color: #fff;
   transform: scale(1.05);
 }
@@ -2068,7 +2098,7 @@ display: none;
 .fixed {
   position: sticky;
   top: 80px;
-  z-index: 4;
+  z-index: 3;
   background: var(--nav-background);
   backdrop-filter: saturate(180%) blur(20px);
 }
@@ -2152,6 +2182,26 @@ box-shadow: var(--hover-shadow);
   z-index: 400;
   top: 200px;
   font-size: 20px;
+}
+.accent {
+  margin-left: 50px;
+}
+.accent .fa-solid {
+  margin-right: 30px;
+  font-size: 2em;
+  border-radius: 50%;
+  border: 5px solid #fff;
+  text-shadow: none;
+  cursor: pointer;
+  box-shadow: var(--shadow);
+}
+hr {
+  background-color: var(--border-color);
+  width: 95%;
+  margin: auto;
+  border-radius: 8px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
   ';
 if(!isset($_GET['original'])){
