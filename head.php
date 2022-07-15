@@ -115,7 +115,7 @@ header_register_callback(function(){
       
               <div class="navbar-dropdown" id="etc-nav">
                 <a class="navbar-item" href="/about/">
-                    <img src="/favicon.ico" class="icon-img" width="53">あいしぃーのサーバーについて
+                    <img src="/favicon.ico" class="aicy-icon" width="53">あいしぃーのサーバーについて
                     </a>
                     <hr class="navbar-divider">
                 <a class="navbar-item" href="/unei/">

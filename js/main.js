@@ -1063,6 +1063,7 @@ function setaccent_blue() {
   $('link[href^="/css/pink/"]').remove();
   $('link[href^="/css/blue/"]').remove();
   document.cookie = 'blue=true; path=/; expires=Fri, 31-Dec-2038 23:59:59 JST';
+  document.cookie = 'brown=; max-age=0; path=/;';
   document.cookie = 'pink=; max-age=0; path=/;';
   $('#accent_blue').addClass('preference-img-selected');
   $('#accent_brown').removeClass('preference-img-selected');
@@ -1080,6 +1081,7 @@ function setaccent_pink() {
   $('link[href^="/css/blue/"]').remove();
   document.cookie = 'pink=true; path=/; expires=Fri, 31-Dec-2038 23:59:59 JST';
   document.cookie = 'blue=; max-age=0; path=/;';
+  document.cookie = 'brown=; max-age=0; path=/;';
   $('#accent_pink').addClass('preference-img-selected');
   $('#accent_blue').removeClass('preference-img-selected');
   $('#accent_brown').removeClass('preference-img-selected');
