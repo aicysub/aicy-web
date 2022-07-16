@@ -659,7 +659,7 @@ blockquote {
   color: var(--main-text);
   text-overflow: ellipsis;
   white-space: nowrap;
-  overflow: hidden;
+  overflow: visible;
 }
 
 input[type="checkbox"].on-off {

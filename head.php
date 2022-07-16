@@ -11,6 +11,7 @@ header_register_callback(function(){
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
     <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.min.js" defer></script>
     <link rel="icon" href="/favicon.ico">
+    <meta name="google-site-verification" content="FdpRJBqfIsG3SeAgAF3heXv2B-cPdUVMXqDYE13CYwc" />
       </head>
 <body>
 <div id="loadings" style="display:none;"></div>

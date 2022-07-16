@@ -794,11 +794,11 @@ function setup_modal() {
 }
 
 function config_themes() {
-  $('#preference-list').fadeOut(1000);
-  $('#preference-end').fadeOut(1000);
+  $('#preference-list').fadeOut(600);
+  $('#preference-end').fadeOut(600);
   setTimeout(function() {
-      $('#preference-themes').fadeIn(1000);
-      $('#preference-themes-end').fadeIn(1000);
+      $('#preference-themes').fadeIn(599);
+      $('#preference-themes-end').fadeIn(599);
       $('#preference-themes-end').css('display', 'flex');
       $('.preference-title').text('テーマ設定')
     },
@@ -806,11 +806,11 @@ function config_themes() {
 };
 
 function etc_config() {
-  $('.preference-main').fadeOut(1000);
-  $('.preference-end').fadeOut(1000);
+  $('.preference-main').fadeOut(600);
+  $('.preference-end').fadeOut(600);
   setTimeout(function() {
-      $('#preference-list').fadeIn(600);
-      $('#preference-end').fadeIn(600);
+      $('#preference-list').fadeIn(599);
+      $('#preference-end').fadeIn(599);
       $('#preference-end').css('display', 'flex');
       $('.preference-title').text('サイト設定')
     },
@@ -874,11 +874,11 @@ $(document).ready(function() {
 });
 
 function config_anime() {
-  $('#preference-list').fadeOut(1000);
-  $('#preference-end').fadeOut(1000);
+  $('#preference-list').fadeOut(600);
+  $('#preference-end').fadeOut(600);
   setTimeout(function() {
-      $('#anime-config').fadeIn(1000);
-      $('#preference-anime-end').fadeIn(1000);
+      $('#anime-config').fadeIn(599);
+      $('#preference-anime-end').fadeIn(599);
       $('#preference-anime-end').css('display', 'flex');
       $('.preference-title').text('アニメーション設定')
     },
@@ -886,11 +886,11 @@ function config_anime() {
 };
 
 function etc_config() {
-  $('.preference-main').fadeOut(1000);
-  $('.preference-end').fadeOut(1000);
+  $('.preference-main').fadeOut(600);
+  $('.preference-end').fadeOut(600);
   setTimeout(function() {
-      $('#preference-list').fadeIn(600);
-      $('#preference-end').fadeIn(600);
+      $('#preference-list').fadeIn(599);
+      $('#preference-end').fadeIn(599);
       $('#preference-end').css('display', 'flex');
       $('.preference-title').text('サイト設定')
     },
