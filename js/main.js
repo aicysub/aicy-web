@@ -33,10 +33,9 @@ $(function() {
 });
 
 $(function() {
-  var topBtn = $('#page_top');
-  topBtn.hide();
+  var topBtn = $('.top');
   $(window).scroll(function() {
-    if ($(this).scrollTop() > 80) {
+    if ($(this).scrollTop() > 200) {
       topBtn.fadeIn(600);
     } else {
       topBtn.fadeOut(600);
@@ -199,14 +198,18 @@ $(document).ready(function() {
 });
 setTimeout(function() {
   $(document).ready(function() {
-    $('body').fadeIn();
+    $('body').fadeIn(1000);
+    $('.contents').fadeIn(1500);
+    setTimeout(function() {
+      $('.contents').show();
+    }, 2000);
     $('#modals').css('width', $(window).width());
-    $('#modals').css('height', $(window).height() - 90);
+    $('#modals').css('height', $(window).height() - 70);
   })
 }, 1200);
 $('.footers').click(function() {
   $('.footers').css('bottom', '-300px');
-  $('#page_top').css('bottom', '2%');
+  $('#page_top').css('bottom', '0');
 });
 var num = 0;
 $("#navbar-burger").click(function() {
@@ -337,7 +340,6 @@ $(document).ready(function() {
           $('#selected').css('display', 'none');
         });
       });
-      twemoji.parse(document.body);
     }, 1000);
     return false;
   });
@@ -524,8 +526,7 @@ window.addEventListener('popstate', function(e) {
         $('section#' + val).fadeIn(600);
         $('#selected').css('display', 'none');
       }, 599);
-    });
-    twemoji.parse(document.body);
+    })
   }, 1000);
   return false;
 });
@@ -1013,10 +1014,6 @@ $('.contents').hover(
 function search() {
   $('link[href^="/owner/aicy/birthday.css"]').remove();
   $('script[src^="/owner/aicy/birthday.js"]').remove();
-  window.scroll({
-    top: 0,
-    behavior: 'smooth'
-  });
   $('.contents').fadeOut(600);
   history.pushState(null, null, '/search?q=' + $('input[name=search]').val());
   setTimeout(function() {
@@ -1024,7 +1021,104 @@ function search() {
   }, 600);
   setTimeout(function() {
     $('.contents').fadeIn(600);
+    $('img').attr('loading', 'lazy');
+    $('#admin').hover(
+      function() {
+        $('#etc-nav').fadeOut(600);
+        $('#tools-nav').fadeOut(600);
+        $('#events-nav').fadeOut(600);
+        $('#admin-nav').fadeIn(600);
+      },
+      function() {
+        $('#admin-nav').hover(
+          function() {
+            $('#admin-nav').css('display', 'block');
+          },
+          function() {
+            $('#admin-nav').fadeOut(600);
+          }
+        );
+      }
+    );
+    $('#etc').hover(
+      function() {
+        $('#admin-nav').fadeOut(600);
+        $('#tools-nav').fadeOut(600);
+        $('#events-nav').fadeOut(600);
+        $('#etc-nav').fadeIn(600);
+      },
+      function() {
+        $('#etc-nav').hover(
+          function() {
+            $('#etc-nav').css('display', 'block');
+          },
+          function() {
+            $('#etc-nav').fadeOut(600);
+          }
+        );
+      }
+    );
+    $('#tools').hover(
+      function() {
+        $('#admin-nav').fadeOut(600);
+        $('#etc-nav').fadeOut(600);
+        $('#events-nav').fadeOut(600);
+        $('#tools-nav').fadeIn(600);
+      },
+      function() {
+        $('#tools-nav').hover(
+          function() {
+            $('#tools-nav').css('display', 'block');
+          },
+          function() {
+            $('#tools-nav').fadeOut(600);
+          }
+        );
+      }
+    );
+    $('.contents').hover(
+      function() {
+        $('#admin-nav').fadeOut(600);
+        $('#etc-nav').fadeOut(600);
+        $('#events-nav').fadeOut(600);
+        $('#tools-nav').fadeOut(600);
+      },
+      function() {
+        $('#admin-nav').fadeOut(600);
+        $('#etc-nav').fadeOut(600);
+        $('#tools-nav').fadeOut(600);
+        $('#events-nav').fadeOut(600);
+      });
+      $('#events').hover(
+        function() {
+          $('#admin-nav').fadeOut(600);
+          $('#etc-nav').fadeOut(600);
+          $('#events-nav').fadeIn(600);
+          $('#tools-nav').fadeOut(600);
+        },
+        function() {
+          $('#events-nav').hover(
+            function() {
+              $('#events-nav').css('display', 'block');
+            },
+            function() {
+              $('#events-nav').fadeOut(600);
+            }
+          );
+        }
+      );
+    $('select').change(function() {
+      var val = $('select option:selected').val();
+      if (val == 'select') return;
+      $('section').fadeOut(600);
+      $('#selected').fadeOut(600);
+      setTimeout(function() {
+        $('section#' + val).fadeIn(600);
+        $('#selected').css('display', 'none');
+      });
+    })
   }, 1000);
+  return false;
 }
 $('input[name=search]').keypress(function(e) {
   if (e.which == 13) {
@@ -1108,4 +1202,13 @@ function setaccent_brown() {
   setTimeout(function() {
     $('#saved').css('opacity', '0');
   }, 3000);
+}
+function copy() {
+$("textarea").select();
+document.execCommand("Copy");
+$('button').text('コピーしました')
+$("textarea").blur();
+setTimeout(function() {
+  $('button').text('コピー')
+}, 2000);
 }

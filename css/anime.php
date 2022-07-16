@@ -179,7 +179,7 @@ $original_css = '
 
 .top,
 .top:hover {
-  transition: all .5s ease;
+  transition: bottom .6s ease;
 }
 
 .navbar,

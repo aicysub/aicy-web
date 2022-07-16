@@ -29,10 +29,12 @@ ob_start();
     <meta itemprop="position" content="1" />
   </li>
 </ol>
+<div class="admin-background">
 <h2 class="title h2" style="text-align: center;">お知らせ</h2>
 <?php include '/hdd/aic/edit.php'; ?>
 <div class="box">
 <?php require("/hdd/aic/news/list.php"); ?>
+</div>
 </div>
 <br>
 <h2 class="h2 title">あいしぃーのさーばー</h2>

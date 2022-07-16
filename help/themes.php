@@ -55,11 +55,11 @@
 があります。
 </p><br>
 <h2 class="title h2" id="ホワイトテーマとは？">ホワイトテーマとは？</h2>
-<p style="text-align:center;"><img src="/images/white-mode.png" loading="lazy" style="border-radius: 2em;" width="300px"></p><p style="text-align:center;opacity: .8;">ホワイトモードのサンプル画像</p><p style="text-align:center;"><br>一番、シンプルなものになるように設計しているテーマで、白をメインに扱っているテーマとなります。<br>また、このサイトの最初期から存在しており、ほかのテーマの基盤となっています。
+<p style="text-align:center;"><img src="/images/themes/white-mode.webp" loading="lazy" style="border-radius: 2em;" width="300px"></p><p style="text-align:center;opacity: .8;">ホワイトモードのサンプル画像</p><p style="text-align:center;"><br>一番、シンプルなものになるように設計しているテーマで、白をメインに扱っているテーマとなります。<br>また、このサイトの最初期から存在しており、ほかのテーマの基盤となっています。
 </p>
 <br>
 <h2 class="h2 title" id="ダークテーマとは？">ダークテーマとは？</h2>
-<p style="text-align:center;"><img src="/images/dark-mode.png" loading="lazy" style="border-radius: 2em;" width="300px"></p><p style="text-align:center;opacity: .8;">ダークモードのサンプル画像</p>
+<p style="text-align:center;"><img src="/images/themes/dark-mode.webp" loading="lazy" style="border-radius: 2em;" width="300px"></p><p style="text-align:center;opacity: .8;">ダークモードのサンプル画像</p>
 <br>
 <p style="text-align:center;">ダークテーマは、夜間での閲覧を考慮したテーマで、
 黒（※完全な黒ではない）をメインに扱っています。<br>
@@ -72,7 +72,7 @@
 </p>
 <br>
 <h2 class="h2 title" id="スペシャルテーマとは？">スペシャルテーマとは？</h2>
-<p style="text-align:center;"><img src="/images/special-mode.png" loading="lazy" style="border-radius: 2em;" width="300px"></p><p style="text-align:center;opacity: .8;">スペシャルモードのサンプル画像</p>
+<p style="text-align:center;"><img src="/images/themes/special-mode.webp" loading="lazy" style="border-radius: 2em;" width="300px"></p><p style="text-align:center;opacity: .8;">スペシャルモードのサンプル画像</p>
 <br>
 <p style="text-align:center;">
 スペシャルテーマは比較的最近に追加されたテーマで、<br>

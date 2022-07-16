@@ -102,15 +102,15 @@ if (isset($_COOKIE['pink'])){
 <div class="preference-main" id="preference-themes">
   <p class="preference-main-title">テーマ設定</p><br>
   <ul class="preference-img">   
-  <li><label for="white" onclick="white_click()" ><img id="white-img" class="<?php echo $white_select_status;?>" src="/images/white-mode.png" loading="lazy"></label>
+  <li><label for="white" onclick="white_click()" ><img id="white-img" class="<?php echo $white_select_status;?>" src="/images/themes/white-mode.webp" loading="lazy"></label>
   <p><input type="radio" name="themes" id="white" value="white">
   <label for="white">ホワイト</label></p>   </li> 
    <li><label for="dark" onclick="dark_click()" >
-   <img id="dark-img" class="<?php echo $select_status;?>" src="/images/dark-mode.png" loading="lazy"></label>
+   <img id="dark-img" class="<?php echo $select_status;?>" src="/images/themes/dark-mode.webp" loading="lazy"></label>
     <p>     <input type="radio" name="themes" id="dark" value="dark">
     <label for="dark">ダーク</label></p>  </li>
     <li><label for="special" onclick="special_click()" >
-   <img id="special-img" class="<?php echo $special_select_status;?>" src="/images/special-mode.png" loading="lazy"></label>
+   <img id="special-img" class="<?php echo $special_select_status;?>" src="/images/themes/special-mode.webp" loading="lazy"></label>
     <p>     <input type="radio" name="themes" id="special" value="special">
     <label for="dark">スペシャル</label></p>  </li>
   </ul>

@@ -9,7 +9,6 @@ header_register_callback(function(){
 <meta charset="utf-8"/>
 <link rel="stylesheet" href="/css/preload.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.min.js" defer></script>
     <link rel="icon" href="/favicon.ico">
       </head>
@@ -124,9 +123,12 @@ header_register_callback(function(){
                 <a class="navbar-item" href="/contacts/" id="contacts">
                     <i class="fa-solid fa-address-book"></i>   お問い合わせ / 報告
                 </a>
+                <a class="navbar-item" href="/license/" id="contacts">
+                <i class="fa-solid fa-book-bookmark"></i>   ライセンスについて
+                </a>
             <hr class="navbar-divider">
             <a class="navbar-item" onclick="setup_modal()">
-          <i class="fa-solid fa-box-open"></i> セットアップ（初期化）
+            <i class="fa-solid fa-screwdriver-wrench"></i> セットアップ（初期化）
 </a>
               </div>
             </div>
@@ -139,10 +141,10 @@ header_register_callback(function(){
 <?php require_once("/hdd/aic/input.php"); ?>
       </nav>
       <footer class="footers">
-<h2 class="title" style="text-align: center; padding-bottom: 10px; color: #FFF; text-shadow: 1px 1px 0 #906862, -1px -1px 0 #906862, -1px 1px 0 #906862, 1px -1px 0 #906862, 0px 1px 0 #906862, 0-1px 0 #906862, -1px 0 0 #906862, 1px 0 0 #906862;width: 100%;font-size: 1.5em;"><i class="fa-solid fa-copyright" style="color: #FFF;"></i>AIC_Group. / <a href="/owner/aicy/" class="none" id="aicy-footer"><img src="/favicon.ico" width="30"></a> <?php echo date('Y'); ?></h2><p class="color" style="text-align:center; font-size: 15px; font-weight: normal; margin-top: 1%;">現在ダークモードで表示しています</p><p class="white" style="text-align:center;font-size: 15px; font-weight: normal; margin-top: 1%;">現在ホワイトモードで表示しています</p><p style="text-align: center; font-size: 15px; font-weight: normal; " title="メニューの最終更新日" alt="メニューの最終更新日"></p><p style="text-align:center;"><span style="font-size: 13px;"><a href="https://twemoji.twitter.com/" target="_blank">Twemoji”</a> by Copyright <?php echo date('Y'); ?> <a href="https://about.twitter.com/" target="_blank">Twitter, Inc</a> and other <a href="https://github.com/twitter/twemoji/graphs/contributors/" target="_blank">contributors</a> is licensed under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC-BY 4.0</a></span><br><i class="fa-solid fa-clock-rotate-left"></i> <?php date_default_timezone_set('asia/tokyo'); clearstatcache(); echo date( "Y/m/d H:i", filemtime(__FILE__)); ?></p></p>
+<h2 class="title" style="text-align: center; padding-bottom: 10px; color: #FFF; text-shadow: 1px 1px 0 #906862, -1px -1px 0 #906862, -1px 1px 0 #906862, 1px -1px 0 #906862, 0px 1px 0 #906862, 0-1px 0 #906862, -1px 0 0 #906862, 1px 0 0 #906862;width: 100%;font-size: 1.5em;"><a href="/license/" style="color:#fff;"><i class="fa-solid fa-copyright left"></i>AIC_Group. / <img src="/favicon.ico" width="30"> <?php echo date('Y'); ?></a></h2><p style="text-align:center;"><span style="font-size: 13px;"><a href="https://twemoji.twitter.com/" target="_blank">Twemoji”</a> by Copyright <?php echo date('Y'); ?> <a href="https://about.twitter.com/" target="_blank">Twitter, Inc</a> and other <a href="https://github.com/twitter/twemoji/graphs/contributors/" target="_blank">contributors</a> is licensed under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC-BY 4.0</a></span</p>
       </footer>
       <p style="cursor:pointer;" onclick="window.scroll({top: 0, behavior: 'smooth'})" id="page_top" class="top">
-      <i class="fa-solid fa-circle-arrow-up"></i>
+      <i class="fa-solid fa-circle-chevron-up"></i>
 </p>
      <?php
      date_default_timezone_set('asia/tokyo'); clearstatcache(); 
@@ -247,7 +249,6 @@ if (isset($_COOKIE['pink'])){
             }
         }, true)
         //]]>
-  twemoji.parse(document.body);
    });
 </script>
 <div class="modals" id="modals"></div>

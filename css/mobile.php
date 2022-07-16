@@ -232,7 +232,7 @@ $original_css = '@keyframes scroll {
   }
   
   #mobile {
-    display: flex;
+    display: block;
   }
   
   .preference-modal {
@@ -318,6 +318,9 @@ $original_css = '@keyframes scroll {
 }
 .toc-fixed {
 display: none !important;
+}
+.news-messeage {
+  width: 100%;
 }
   ';
 if(!isset($_GET['original'])){
