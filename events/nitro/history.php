@@ -21,20 +21,21 @@ ob_start();
   </li>
   <li itemprop="itemListElement" itemscope
       itemtype="https://schema.org/ListItem">
+      <meta itemprop="position" content="2" />
     <a itemprop="item" href="/events/">
         <span itemprop="name">イベント</span>
     </a>
     </li>
     <li itemprop="itemListElement" itemscope
       itemtype="https://schema.org/ListItem">
-    <meta itemprop="position" content="2" />
+    <meta itemprop="position" content="3" />
     <a itemprop="item" href="/events/nitro/">
         <span itemprop="name">Nitro配り大会</span>
     </a>
 </li>
     <li itemprop="itemListElement" itemscope
       itemtype="https://schema.org/ListItem">
-    <meta itemprop="position" content="3" />
+    <meta itemprop="position" content="4" />
     <a itemprop="item" href="/events/nitro/history/">
         <span itemprop="name">履歴</span>
     </a>

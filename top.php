@@ -42,6 +42,7 @@ ob_start();
   <a href="https://discord.gg/H5YR5tkNc9" style="display:block; cursor:pointer;" target="_blank">
 <iframe style="border-radius:20px;cursor:pointer;" src="https://discord.com/widget?id=949560203374915605&theme=dark" width="100%" height="450px" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
 </a>
+<div id="ads"></div>
 </div>
 <?php
 include('/hdd/aic/unei.php');

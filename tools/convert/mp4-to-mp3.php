@@ -35,6 +35,7 @@ if(!isset($_GET['i'])){
   <br>
   <a href="/tools/files/'.$_GET["i"].'.mp4">問題のファイル</a>
   </div>
+<div id="ads"></div>
   </div>
   </div>
   ';
@@ -104,6 +105,7 @@ exit;
   <a href="https://aic-group.sytes.net<?php echo $dirfilename;?>" id="link-none" download="<?php echo $filename;?>">ファイルをダウンロード (<?php echo byte_format($size, 2, true);?>)</a>
   </div>
   <br>
+<div id="ads"></div>
   <h2 class="h2 title">ほかのファイルも変換する</h2>  <br><br>
   <div class="box" style="text-align:center;">
 <?php require("/hdd/aic/tools/convert/input.php");?>

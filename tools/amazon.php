@@ -31,4 +31,5 @@
 <input class="download" name="amazon-search" required> <input class="download" type="submit" value="検索" onclick="amazon_search();"><br>
 <p id="moji" style="display:none;color:#f44336;"><br>文字を入力してください！</p>
 <br><p style="font-size:15px">（このツールにはAmazonアソシエイトリンクが使用されています。）</p>
+<div id="ads"></div>
 </div>

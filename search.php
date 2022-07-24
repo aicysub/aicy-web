@@ -17,6 +17,15 @@ $word_view = "「".$_GET["q"]."」の検索結果";
 <title><?php echo $word_view; ?> - あいしぃーのさーばー</title>
 <h2 class="h2 title fixed"><?php echo $word_view; ?></h2>
 <br>
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-7768523920396309"
+     data-ad-slot="2076535555"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
             <?php foreach ($stmt as $row): ?>
                                                     <div class="search">
                  <?php $counter++; ?>                                  

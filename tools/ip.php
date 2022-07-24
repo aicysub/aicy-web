@@ -66,6 +66,7 @@ if (preg_match('/Windows NT 10.0/', $user_agent)) {
 
 echo "OS： ".$os."</p>";
 ?>
+<div id="ads"></div>
 </div><br>
 <h2 class="h2 title">Whois検索</h2>
 <br>
@@ -76,6 +77,7 @@ echo "OS： ".$os."</p>";
 <p id="whois-messeage">IPアドレス、ドメインから検索可能です。</p><br>
 <p class="whoisarea" id="whoisarea" style="display:none;">
 </p>
+<div id="ads"></div>
 </div>
 <br>
 <br>

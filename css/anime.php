@@ -3,8 +3,8 @@ header( 'Cache-Control: no-store, no-cache, must-revalidate' );
 header( 'Cache-Control: post-check=0, pre-check=0', FALSE );
 header('Pragma:no-cache');
 $original_css = '
-* {
-  transition-duration: 0.6s;
+div,p,a,i,.navbar,.contents,li,ul,input,select,textarea,button {
+  transition-duration: 0.2s;
   transition-timing-function: ease;
   transition-property: color, transform, background-color, display, div, position, span, font-size, text-decoration, box-shadow, border-color, filter, border-radius, background-image, transform, margin, margin-top, margin-bottom, margin-right, margin-left, padding-bottom, outline;
 }
@@ -186,7 +186,9 @@ $original_css = '
 .bread,
 .fixed,
 .toc-fixed {
-  transition: .5s ease;
+  transition-duration: 1s;
+  transition-timing-function: ease;
+  transition-property: top,bottom;
 }
 
 #anime-change {

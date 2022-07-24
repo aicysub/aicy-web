@@ -2,37 +2,27 @@
 header( 'Cache-Control: no-store, no-cache, must-revalidate' );
 header( 'Cache-Control: post-check=0, pre-check=0', FALSE );
 header('Pragma:no-cache');
-$original_css = '@font-face {
-  font-family: "MainFonts";
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "HeadingFonts";
-  font-display: swap;
-}
-
-body {
-  font-family: MainFonts;
-}
-
+$original_css = '
 * {
   scrollbar-width: auto;
   scrollbar-color: var(--accent) transparent;
   scrollbar-darkshadow-color: rgb(0 0 0/12%);
   scroll-padding: 1%;
   scrollbar-shadow-color: rgb(0 0 0/12%);
-  scroll-behavior: smooth;
   outline: 3px solid transparent;
-  transition-duration: 0s;
-  transition-timing-function: ease;
-  transition-property: color, background-color, display, div, position, span, font-size, text-decoration, box-shadow, border-color, filter, border-radius, background-image, transform, margin, margin-top, margin-bottom, margin-right, margin-left, padding-bottom, outline, opatity;
+  font-family: sans-serif;
+}
+.contents div {
+  will-change: opacity;
+}
+.navbar,.box,.bread,.fixed,img,.name-list,.preference-modal,li,ul,input,.modals{
+  will-change: opacity, width, height, animation, box-shadow, backdrop-filter, filter, box-shadow, background, background-color, display, top, position, left, right, bottom, transition, border, color;
+}
+p,span,h1,h2,h3,h4,h5,h6,a,b,i {
   font-feature-settings: "palt"1;
 }
-
 :root {
   --main-text: #272727;
-  --corsor-color: #26292c78;
   --shadow: rgba(0, 0, 0, 0.133) 0px 1.6px 3.6px 0px, rgba(0, 0, 0, 0.11) 0px 0.3px 0.9px 0px;
   --hover-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.04), -10px 0 20px 0px rgba(0, 0, 0, 0.04);
   --background-secondary: #F5F5F6;
@@ -43,10 +33,10 @@ body {
   --input-background: #F4F4F4;
   --opacity-color: #ADADAD;
   --nav-focus: #CBCBCB;
-  --accent: #906862;
-  --modal: #DFDFDF;
+  --accent: #A06A54;
+  --modal: #EFEFEF;
   --site-background: #F6F6F6;
-  --nav-background: #ffffff8c;
+  --nav-background: #F5F5F68c;
   --button-background: #FFF;
 }
 *::selection {
@@ -137,7 +127,7 @@ br {
 }
 
 img[src="/favicon.ico"],
-img[src^="/images/admins/"],
+img[src^="/images/admins/full/"],
 img[src^="https://cdn.discordapp.com/avatars/"] {
   animation: icon-anime infinite 1s 0.3s;
 }
@@ -174,6 +164,7 @@ a {
   background: var(--nav-background);
   backdrop-filter: saturate(180%) blur(20px);
   border-bottom: var(--border);
+  box-shadow: var(--shadow);
 }
 
 .footers {
@@ -259,16 +250,17 @@ button.is-primary.is-hovered,
 }
 
 .navbar-dropdown {
-  max-height: max-content;
+  max-height: 400px;
   border-radius: 0px 0px 20px 20px;
   border-top: 3px solid transparent;
-  box-shadow: rgba(72, 72, 72, 0.18) 0px 13px 26px;
+  box-shadow: var(--shadow);
   border-left: var(--border);
   border-right: var(--border);
   border-bottom: var(--border);
   padding-left: 5%;
   padding-right: 5%;
   background: var(--background-primary);
+  overflow-y: auto;
 }
 
 .fa-solid,
@@ -311,7 +303,6 @@ button.is-primary.is-hovered,
   padding: 1rem 2rem;
   border-bottom: 6px solid var(--accent);
   box-shadow: var(--hover-shadow);
-  font-family: HeadingFonts;
   margin-top: 30px;
   text-align: center;
   user-select: none;
@@ -460,7 +451,6 @@ a {
   cursor: pointer;
   box-shadow: var(--shadow);
   z-index: 3;
-  animation: rotate 1s 0.3s infinite;
 }
 
 .bread:hover {
@@ -543,14 +533,14 @@ a {
   margin-right: 1%;
   font-size: 15px;
   position: relative;
-  top: -3px;
+  top: -7px;
 }
 .contents a[href^="/"]:hover:after {
   transform: translateX(10px);
   margin-right: 5px;
   color: var(--focus);
   font-size: 18px;
-  top: -2px;
+  top: -5px;
 }
 .contents a[href^="#"]::after {
   content: "\f078";
@@ -1243,6 +1233,7 @@ th {
   text-align: center !important;
   border-right: 1px solid var(--corsor-color);
   color: var(--main-text);
+  font-size: 75%;
 }
 
 table {
@@ -1818,7 +1809,6 @@ label {
 
 .preference-main-title {
   font-size: 1.2em;
-  font-family: HeadingFonts;
 }
 
 .preference-img {
@@ -2016,20 +2006,23 @@ margin-right: 10px;
 .preference-list {
   width: 75%;
   margin: auto;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: 5%;
+  margin-bottom: 5%;
   box-shadow: var(--shadow);
+  border-radius: 1em;
 }
 
 .preference-list li {
-  border-bottom: 2px solid var(--accent);
   padding-top: 10px;
   padding-bottom: 10px;
-  font-size: 1.2em;
+  font-size: 20px;
   margin: auto;
   text-align: center;
   background: var(--modal);
   cursor: pointer;
+  border-left: 2px solid var(--border-color);
+  border-top: 2px solid var(--border-color);
+  border-right: 2px solid var(--border-color);
 }
 
 .preference-list li:hover {
@@ -2037,7 +2030,7 @@ margin-right: 10px;
 }
 
 #config-top {
-  border-top: 2px solid var(--accent);
+  border-radius: 1em 1em 0 0;
 }
 
 .preference-submit #pc {
@@ -2248,8 +2241,45 @@ color: #fff;
   font-size: 3em;
   margin-left: -80px;
 }
+.ads-text {
+text-align: center;
+font-size: 18px;
+}
+.admin-icon {
+  width: 20%;
+  border-radius: 50%;
+  align-items: center;
+  margin-right: 5%; 
+  border: 3px solid var(--accent);
+  box-shadow: 0 3px 3px rgb(0 0 0/12%),0 2px 3px -2px rgb(0 0 0/1%);
+  background: var(--background-secondary);
+}
+#config-bottom {
+  border-bottom: 2px solid var(--border-color);
+  border-radius: 0 0 1em 1em;
+}
+.adsbygoogle {
+  display: block;
+  text-align: center;
+  border-radius: 1em;
+  border: var(--border);
+  width: 50%;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  box-shadow: var(--shadow);
+  background: var(--background-secondary);
+}
+.box .adsbygoogle {
+  width: auto;
+  background: var(--background-primary);
+}
   ';
 if(!isset($_GET['original'])){
+  $copyright = '/* Copyright (c) 2022 AIC_Group. */
+
+';
+echo $copyright;
   $css_replaces = [];
   $css_replaces[ '/@charset \"(utf|UTF)-8\";/' ] = '';
   $css_replaces[ '/(\/\*!.*?\*\/|\"(?:(?!(?<!\\\)\").)*\"|\'(?:(?!(?<!\\\)\').)*\')|\/\*.*?\*\//s' ] = '${1}';
@@ -2260,6 +2290,11 @@ if(!isset($_GET['original'])){
   echo $css;
 
   } else {
+    $copyright = '/* Copyright (c) 2022 AIC_Group. */
+/* License -> https://aic-group.sytes.net/license/ */
+
+';
+echo $copyright;
 echo $original_css;
   }
 ?>

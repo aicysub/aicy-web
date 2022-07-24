@@ -54,6 +54,15 @@
 <p style="text-align:center;margin-left: 100px;">
 があります。
 </p><br>
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-7768523920396309"
+     data-ad-slot="2076535555"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
 <h2 class="title h2" id="ホワイトテーマとは？">ホワイトテーマとは？</h2>
 <p style="text-align:center;"><img src="/images/themes/white-mode.webp" loading="lazy" style="border-radius: 2em;" width="300px"></p><p style="text-align:center;opacity: .8;">ホワイトモードのサンプル画像</p><p style="text-align:center;"><br>一番、シンプルなものになるように設計しているテーマで、白をメインに扱っているテーマとなります。<br>また、このサイトの最初期から存在しており、ほかのテーマの基盤となっています。
 </p>
@@ -81,6 +90,15 @@
 特徴は、ピンク色から青色へのグラーデーションをメインに扱っているテーマで、<br>
 ダークテーマを基盤としてデザインされているテーマです。
 </div>
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-7768523920396309"
+     data-ad-slot="2076535555"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
 <br><br>
 </div>
 

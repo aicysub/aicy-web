@@ -125,7 +125,7 @@ if(empty($newfile)){
 </div>
     <p style="text-align:center;"> <a href="https://youtu.be/" target="_blank" rel="noopener noreferrer" style="margin-right: 0.2%;">YouTube</a>・<a href="https://www.nicovideo.jp/" target="_blank" rel="noopener noreferrer" style="margin-right: 0.2%;">niconico</a>・<a href="https://twitter.com/" target="_blank" rel="noopener noreferrer" style="margin-right: 0.2%;">Twitter</a>・<a href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer" style="margin-right: 0.2%;">TikTok</a>・<a onclick="window.open('https://jp.pornhub.com/')" rel="noopener noreferrer" style="margin-right: 0.2%;">PornHub</a>等が利用できます。</p>
 <br>
-    <div class="box">
+<div id="ads"></div>
 <form action="/tools/youtube/v" id="url" style="text-align: center;" method="post">
     <input type="text" class="download" name="url" required>
     <input type="submit" class="download" id="url" value="ダウンロード" required><br>

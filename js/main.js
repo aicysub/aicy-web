@@ -202,6 +202,9 @@ setTimeout(function() {
     $('.contents').fadeIn(1500);
     setTimeout(function() {
       $('.contents').show();
+      $('.contents #ads').each(function(){
+        $(this).load("/ads.html");
+                    });
     }, 2000);
     $('#modals').css('width', $(window).width());
     $('#modals').css('height', $(window).height() - 70);
@@ -211,6 +214,9 @@ $('.footers').click(function() {
   $('.footers').css('bottom', '-300px');
   $('#page_top').css('bottom', '0');
 });
+$('.contents #ads').each(function(){
+  $(this).load("/ads.html");
+              });
 var num = 0;
 $("#navbar-burger").click(function() {
   $("navbar-burger").addClass("footer-none");
@@ -245,7 +251,27 @@ $(document).ready(function() {
     setTimeout(function() {
       $('.contents').fadeIn(600);
       $('img').attr('loading', 'lazy');
-      $('#admin').hover(
+              //<![CDATA[
+                var lazyloadads = false;
+                window.addEventListener("scroll", function() {
+                    if ((document.documentElement.scrollTop != 0 && lazyloadads === false) || (document.body.scrollTop != 0 && lazyloadads === false)) {
+                        (function() {
+                            var ad = document.createElement('script');
+                            ad.type = 'text/javascript';
+                            ad.async = true;
+                            ad.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js';
+                            var sc = document.getElementsByTagName('script')[0];
+                            sc.parentNode.insertBefore(ad, sc);
+                        })();
+                        lazyloadads = true;
+                    }
+                }, true)
+                //]]>
+                $('.contents #ads').each(function(){
+    $(this).load("/ads.html");
+                });
+
+    $('#admin').hover(
         function() {
           $('#etc-nav').fadeOut(600);
           $('#tools-nav').fadeOut(600);
@@ -432,6 +458,25 @@ window.addEventListener('popstate', function(e) {
   setTimeout(function() {
     $('.contents').fadeIn(600);
     $('img').attr('loading', 'lazy');
+            //<![CDATA[
+              var lazyloadads = false;
+              window.addEventListener("scroll", function() {
+                  if ((document.documentElement.scrollTop != 0 && lazyloadads === false) || (document.body.scrollTop != 0 && lazyloadads === false)) {
+                      (function() {
+                          var ad = document.createElement('script');
+                          ad.type = 'text/javascript';
+                          ad.async = true;
+                          ad.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js';
+                          var sc = document.getElementsByTagName('script')[0];
+                          sc.parentNode.insertBefore(ad, sc);
+                      })();
+                      lazyloadads = true;
+                  }
+              }, true)
+              //]]>
+              $('.contents #ads').each(function(){
+                $(this).load("/ads.html");
+                            });
     $('#admin').hover(
       function() {
         $('#etc-nav').fadeOut(600);

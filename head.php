@@ -16,7 +16,7 @@ header_register_callback(function(){
 <body>
 <div id="loadings" style="display:none;"></div>
   <div id="cursor"></div>
-    <nav style="user-select: none;" class="navbar" role="navigation" aria-label="main navigation">
+    <nav style="user-select: none;" class="navbar" aria-label="main navigation">
         <div class="navbar-brand">
           <a class="navbar-item" href="/">
             <img src="/favicon.ico" width="63" height="116" class="aicy-icon" id="top-img">
@@ -93,6 +93,10 @@ header_register_callback(function(){
                     <a class="navbar-item" href="/admin/ryouma/" id="ryo">
                     <img src="/images/admins/ryouma.webp" class="icon-img" width="33">  りょうま
                     </a>
+                    </a>
+                    <a class="navbar-item" href="/admin/ropeta/" id="rop">
+                    <img src="/images/admins/ropeta.webp" class="icon-img" width="33">  ロープTA
+                    </a>
               </div>
               </div>
               <div class="navbar-item has-dropdown is-hoverable">
@@ -124,7 +128,7 @@ header_register_callback(function(){
                 <a class="navbar-item" href="/contacts/" id="contacts">
                     <i class="fa-solid fa-address-book"></i>   お問い合わせ / 報告
                 </a>
-                <a class="navbar-item" href="/license/" id="contacts">
+                <a class="navbar-item" href="/license/" id="license">
                 <i class="fa-solid fa-book-bookmark"></i>   ライセンスについて
                 </a>
             <hr class="navbar-divider">
@@ -155,8 +159,8 @@ header_register_callback(function(){
      $config_js_v = "?v=".date("Y-m-d.h")."";
      $special_css_v = "?v=".date("Y-m-d.h")."";
 echo '
-<script type="text/javascript" src="/js/main.js'.$main_js_v.' "></script>
-<script type="text/javascript" src="/js/setup/'.$config_js_v.' "></script>
+<script src="/js/main.js'.$main_js_v.' "></script>
+<script src="/js/setup/'.$config_js_v.' "></script>
 ';
 echo '<script>';
 echo 'setTimeout(function(){loadCSS( "/css/main/'.$main_css_v.'", document.getElementById("loadcss") );},900);';

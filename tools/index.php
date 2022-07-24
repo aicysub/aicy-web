@@ -30,3 +30,5 @@ require("/hdd/aic/head.php");
 <div class="box">
 <a href="/tools/convert/">mp3変換ツール</a>・ <a href="/tools/ip/">IPアドレスチェッカー</a>・ <a href="/tools/amazon/">Anazon検索ツール</a>・ <a href="/tools/text/">文字数チェッカー</a>
 </div>
+<div id="ads"></div>
+<div id="ads"></div>

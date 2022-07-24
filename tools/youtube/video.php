@@ -206,7 +206,9 @@ return FALSE;
         date_default_timezone_set('asia/tokyo'); clearstatcache(); 
     echo '<title>処理が完了しました - あいしぃーのサーバー</title><h2 class="h2 title">処理が完了しました</h2>';
     include '/hdd/aic/edit.php';
-    echo '<div class="box"><div style="text-align: center;">';
+    echo '<div class="box"><div style="text-align: center;">
+<div id="ads"></div>
+    ';
     echo '<p style="text-align:center;"><a href="'.$video_link.'" target="_blank">'.$video_title.'</a></p><br>
     <link href="https://vjs.zencdn.net/7.19.2/video-js.css" rel="stylesheet" />
     <script src="https://vjs.zencdn.net/7.19.2/video.min.js"></script>
@@ -230,6 +232,7 @@ return FALSE;
         </form>
     </div>';
     echo '
+<div id="ads"></div>
     <h2 class="h2 title">ログを見る</h2>
     <div class="box" style="text-align:center;">
     <div class="open-box">

@@ -34,16 +34,6 @@ if (isset($_COOKIE['pink'])){
       opacity: 0;
     }
     </style>
-    <script>
-      $('#anime-none-change-pc').text(' アニメ ON');
-      $('#dark-change-pc').text(' ダークモード');
-      $('#anime-change-pc').text(' アニメ OFF');
-      $('#white-change-pc').text(' ホワイトモード');
-      $('#anime-none-change').text(' アニメ ON');
-      $('#dark-change').text(' ダークモード');
-      $('#anime-change').text(' アニメ OFF');
-      $('#white-change').text(' ホワイトモード');
-      </script>
 <i class="fa-solid fa-xmark preference-close" onclick="preference_close()" id="preference-close"></i>
 <div class="preference">
   <?php  if (PHP_OS === 'Darwin') {
@@ -90,7 +80,7 @@ if (isset($_COOKIE['pink'])){
  <li onclick="config_themes()" id="config-top">テーマ設定</li>
  <li onclick="config_anime()">アニメ設定</li>
  <li onclick="config_color()">デザイン設定（作成中）</li>
- <li onclick="setup_warning()">初期化（再セットアップ）</li>
+ <li onclick="setup_warning()" id="config-bottom">初期化（再セットアップ）</li>
 </ul>
 <br>
 <p>すべての設定は<a href="https://ja.wikipedia.org/wiki/HTTP_cookie" target="_blank">Cookie</a>に保存されます。</p>

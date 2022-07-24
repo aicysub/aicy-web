@@ -323,16 +323,26 @@ display: none !important;
   width: 100%;
 }
   ';
-if(!isset($_GET['original'])){
-    $css_replaces = [];
-    $css_replaces[ '/@charset \"(utf|UTF)-8\";/' ] = '';
-    $css_replaces[ '/(\/\*!.*?\*\/|\"(?:(?!(?<!\\\)\").)*\"|\'(?:(?!(?<!\\\)\').)*\')|\/\*.*?\*\//s' ] = '${1}';
-    $css_replaces[ '/(\/\*!.*?\*\/|\"(?:(?!(?<!\\\)\").)*\"|\'(?:(?!(?<!\\\)\').)*\')\s*|\s+/s' ] = '${1} ';
-    $css_replaces[ '/(\/\*!.*?\*\/|\"(?:(?!(?<!\\\)\").)*\"|\'(?:(?!(?<!\\\)\').)*\')| ([!#$%&,.:;<=>?@^{|}~]) |([!#$&(,.:;<=>?@\[^{|}~]|\A) | ([$%&),;<=>?@\]^{|}~]|\z)/s' ] = '${1}${2}${3}${4}';
-    $css_replaces[ '/(\/\*!.*?\*\/|\"(?:(?!(?<!\\\)\").)*\"|\'(?:(?!(?<!\\\)\').)*\'|\([^;{}]+\))| ([+\-\/]) |([+\-\/]) | ([+\/])/s' ] = '${1}${2}${3}${4}';
-    $css = preg_replace( array_keys( $css_replaces ), array_values( $css_replaces ), $original_css );
-    echo $css;
+  if(!isset($_GET['original'])){
+    $copyright = '/* Copyright (c) 2022 AIC_Group. */
   
-    } else {
-  echo $original_css;
-    }
+    ';
+    echo $copyright; 
+    $css_replaces = [];
+     $css_replaces[ '/@charset \"(utf|UTF)-8\";/' ] = '';
+     $css_replaces[ '/(\/\*!.*?\*\/|\"(?:(?!(?<!\\\)\").)*\"|\'(?:(?!(?<!\\\)\').)*\')|\/\*.*?\*\//s' ] = '${1}';
+     $css_replaces[ '/(\/\*!.*?\*\/|\"(?:(?!(?<!\\\)\").)*\"|\'(?:(?!(?<!\\\)\').)*\')\s*|\s+/s' ] = '${1} ';
+     $css_replaces[ '/(\/\*!.*?\*\/|\"(?:(?!(?<!\\\)\").)*\"|\'(?:(?!(?<!\\\)\').)*\')| ([!#$%&,.:;<=>?@^{|}~]) |([!#$&(,.:;<=>?@\[^{|}~]|\A) | ([$%&),;<=>?@\]^{|}~]|\z)/s' ] = '${1}${2}${3}${4}';
+     $css_replaces[ '/(\/\*!.*?\*\/|\"(?:(?!(?<!\\\)\").)*\"|\'(?:(?!(?<!\\\)\').)*\'|\([^;{}]+\))| ([+\-\/]) |([+\-\/]) | ([+\/])/s' ] = '${1}${2}${3}${4}';
+     $css = preg_replace( array_keys( $css_replaces ), array_values( $css_replaces ), $original_css );
+     echo $css;
+   
+     } else {
+      $copyright = '/* Copyright (c) 2022 AIC_Group. */
+      /* License -> https://aic-group.sytes.net/license/ */
+      
+      ';
+      echo $copyright;
+   echo $original_css;
+     }
+  ?>

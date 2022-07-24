@@ -2,12 +2,14 @@
 header( 'Cache-Control: no-store, no-cache, must-revalidate' );
 header( 'Cache-Control: post-check=0, pre-check=0', FALSE );
 header('Pragma:no-cache');
+$copyright = '/* Copyright (c) 2022 AIC_Group. */
+
+';
+echo $copyright;
 $original_css = ':root {
     --main-text: #fff;
     --background-secondary: linear-gradient(to right, #fc466b, #3f5efb);
-    ;
     --background-primary: linear-gradient(to right, #c94b4b, #4b134f);
-    --accent: #bd8981;
     --border: 2px solid var(--accent);
     --border-color: var(--accent);
     --nav-focus: #D4D4D47A;
@@ -70,16 +72,25 @@ $original_css = ':root {
   }
 ';
 if(!isset($_GET['original'])){
-    $css_replaces = [];
-    $css_replaces[ '/@charset \"(utf|UTF)-8\";/' ] = '';
-    $css_replaces[ '/(\/\*!.*?\*\/|\"(?:(?!(?<!\\\)\").)*\"|\'(?:(?!(?<!\\\)\').)*\')|\/\*.*?\*\//s' ] = '${1}';
-    $css_replaces[ '/(\/\*!.*?\*\/|\"(?:(?!(?<!\\\)\").)*\"|\'(?:(?!(?<!\\\)\').)*\')\s*|\s+/s' ] = '${1} ';
-    $css_replaces[ '/(\/\*!.*?\*\/|\"(?:(?!(?<!\\\)\").)*\"|\'(?:(?!(?<!\\\)\').)*\')| ([!#$%&,.:;<=>?@^{|}~]) |([!#$&(,.:;<=>?@\[^{|}~]|\A) | ([$%&),;<=>?@\]^{|}~]|\z)/s' ] = '${1}${2}${3}${4}';
-    $css_replaces[ '/(\/\*!.*?\*\/|\"(?:(?!(?<!\\\)\").)*\"|\'(?:(?!(?<!\\\)\').)*\'|\([^;{}]+\))| ([+\-\/]) |([+\-\/]) | ([+\/])/s' ] = '${1}${2}${3}${4}';
-    $css = preg_replace( array_keys( $css_replaces ), array_values( $css_replaces ), $original_css );
-    echo $css;
-  
-    } else {
-  echo $original_css;
-    }
+  $copyright = '/* Copyright (c) 2022 AIC_Group. */
+
+  ';
+  echo $copyright; 
+  $css_replaces = [];
+   $css_replaces[ '/@charset \"(utf|UTF)-8\";/' ] = '';
+   $css_replaces[ '/(\/\*!.*?\*\/|\"(?:(?!(?<!\\\)\").)*\"|\'(?:(?!(?<!\\\)\').)*\')|\/\*.*?\*\//s' ] = '${1}';
+   $css_replaces[ '/(\/\*!.*?\*\/|\"(?:(?!(?<!\\\)\").)*\"|\'(?:(?!(?<!\\\)\').)*\')\s*|\s+/s' ] = '${1} ';
+   $css_replaces[ '/(\/\*!.*?\*\/|\"(?:(?!(?<!\\\)\").)*\"|\'(?:(?!(?<!\\\)\').)*\')| ([!#$%&,.:;<=>?@^{|}~]) |([!#$&(,.:;<=>?@\[^{|}~]|\A) | ([$%&),;<=>?@\]^{|}~]|\z)/s' ] = '${1}${2}${3}${4}';
+   $css_replaces[ '/(\/\*!.*?\*\/|\"(?:(?!(?<!\\\)\").)*\"|\'(?:(?!(?<!\\\)\').)*\'|\([^;{}]+\))| ([+\-\/]) |([+\-\/]) | ([+\/])/s' ] = '${1}${2}${3}${4}';
+   $css = preg_replace( array_keys( $css_replaces ), array_values( $css_replaces ), $original_css );
+   echo $css;
+ 
+   } else {
+    $copyright = '/* Copyright (c) 2022 AIC_Group. */
+    /* License -> https://aic-group.sytes.net/license/ */
+    
+    ';
+    echo $copyright;
+ echo $original_css;
+   }
 ?>

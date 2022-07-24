@@ -118,6 +118,15 @@ echo '
 include '/hdd/aic/edit.php';
 echo '
 <div class="box">
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-7768523920396309"
+     data-ad-slot="2076535555"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
 '.$link.'
 <form action="/youtube/a" style="text-align: center;" method="post">
 <input type="text" class="download" name="audio" required>
@@ -201,6 +210,7 @@ return FALSE;
         </form>
     </div>';
     echo '
+    <div id="ads"></div>
     <h2 class="h2 title">ログを見る</h2>
     <div class="box" style="text-align:center;">
     <div class="open-box">

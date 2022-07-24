@@ -4,7 +4,6 @@ header( 'Cache-Control: post-check=0, pre-check=0', FALSE );
 header('Pragma:no-cache');
 $original_css = ':root {
    --main-text: #CDCDCD;
-   --corsor-color: rgba(255, 255, 255, .535);
    --background-secondary: #26292B;
    --focus: rgb(100 172 255);
    --background-primary: #1F2021;
@@ -15,22 +14,14 @@ $original_css = ':root {
    --nav-focus: #343435;
    --modal: #222224;
    --site-background: #222224;
-   --nav-background: #2324254a;
+   --nav-background: #26292b7a;
    --button-background: #515254;
-   --accent: #9C6963;
-   --shadow: 0 22px 70px 4px rgba(0, 0, 0, 0.56);
+   --shadow: rgba(0, 0, 0, 0.56) 0px 1.6px 3.6px 0px, rgba(0, 0, 0, 0.56) 0px 0.3px 0.9px 0px;
 }
  
  html {
    background-color: #16181A;
    color: #fff
- }
- 
- .navbar-dropdown {
-   box-shadow: 0 4px 16px rgba(17, 17, 26, .1), 0 8px 24px rgba(17, 17, 26, .1), 0 16px 56px rgba(17, 17, 26, .1);
-   border-left: var(--border);
-   border-right: var(--border);
-   border-bottom: var(--border);
  }
  
  .navbar-item,
@@ -205,7 +196,11 @@ $original_css = ':root {
  }
 ';
 if(!isset($_GET['original'])){
-   $css_replaces = [];
+  $copyright = '/* Copyright (c) 2022 AIC_Group. */
+
+  ';
+  echo $copyright; 
+  $css_replaces = [];
    $css_replaces[ '/@charset \"(utf|UTF)-8\";/' ] = '';
    $css_replaces[ '/(\/\*!.*?\*\/|\"(?:(?!(?<!\\\)\").)*\"|\'(?:(?!(?<!\\\)\').)*\')|\/\*.*?\*\//s' ] = '${1}';
    $css_replaces[ '/(\/\*!.*?\*\/|\"(?:(?!(?<!\\\)\").)*\"|\'(?:(?!(?<!\\\)\').)*\')\s*|\s+/s' ] = '${1} ';
@@ -215,6 +210,11 @@ if(!isset($_GET['original'])){
    echo $css;
  
    } else {
+    $copyright = '/* Copyright (c) 2022 AIC_Group. */
+    /* License -> https://aic-group.sytes.net/license/ */
+    
+    ';
+    echo $copyright;
  echo $original_css;
    }
 ?>
