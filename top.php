@@ -2,6 +2,15 @@
 include('/hdd/aic/head.php');
 ob_start();
 ?>
+<ol itemscope class="bread none" itemtype="https://schema.org/BreadcrumbList">
+  <li itemprop="itemListElement" itemscope
+      itemtype="https://schema.org/ListItem">
+    <a itemprop="item" href="/">
+        <span itemprop="name">ホーム</span>
+    </a>
+    <meta itemprop="position" content="1" />
+  </li>
+</ol>
 <meta name="description" content="あいしぃーのサーバー" />
 <meta property="og:type" content="HP" />
 <meta property="og:title" content="トップページ" />
@@ -20,15 +29,6 @@ ob_start();
     color: var(--main-text);
   }
   </style>
-<ol itemscope class="bread none" itemtype="https://schema.org/BreadcrumbList">
-  <li itemprop="itemListElement" itemscope
-      itemtype="https://schema.org/ListItem">
-    <a itemprop="item" href="/">
-        <span itemprop="name">ホーム</span>
-    </a>
-    <meta itemprop="position" content="1" />
-  </li>
-</ol>
 <div class="admin-background">
 <h2 class="title h2" style="text-align: center;">お知らせ</h2>
 <?php include '/hdd/aic/edit.php'; ?>

@@ -19,7 +19,7 @@ $original_css = '
   will-change: opacity;
 }
 .navbar,.box,.bread,.fixed,img,.name-list,.preference-modal,li,ul,input,.modals{
-  will-change: opacity, width, height, animation, box-shadow, backdrop-filter, filter, box-shadow, background, background-color, display, top, position, left, right, bottom, transition, border, color;
+  will-change: opacity, animation, backdrop-filter, filter, background, background-color, top, position, left, right, bottom, transition, color;
 }
 p,span,h1,h2,h3,h4,h5,h6,a,b,i {
   font-feature-settings: "palt"1;
@@ -1772,7 +1772,6 @@ rt {
   border-left: var(--border);
   border-bottom: var(--border);
   border-right: var(--border);
-  box-shadow: var(--hover-shadow);
 }
 
 input[type="checkbox"]:focus,
@@ -1922,7 +1921,7 @@ label {
 }
 
 .preference-modal {
-  box-shadow: rgb(0 0 0 / 56%) 0px 22px 70px 4px;
+  box-shadow: rgb(0,0,0) 0px 22px 70px 4px;
   width: 50%;
   border-radius: 38px;
   position: fixed;
@@ -2195,7 +2194,6 @@ color: #fff;
  border-radius: 0px;
 }
 .admin-background {
-  margin-top: 30px;
   background: var(--background-primary);
   padding-top: 50px;
   padding-bottom: 50px;
@@ -2313,6 +2311,48 @@ filter: drop-shadow(2px 4px 0 rgba(0,0,0,.25));
 .card-tools .card-word {
   font-size: 80%;
   margin-top: 10px;
+}
+#share {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin-right: 5%;
+  margin-bottom: 20px;
+  font-size: 2em;
+  background: var(--nav-focus);
+  width: 10%;
+  z-index: 30;
+  padding-left: 30px;
+  padding-right: 30px;
+  border-radius: 5000px;
+  box-shadow: var(--shadow);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.twitter {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #1DA1F2;
+  padding-left: 9px;
+  margin-top: 3px;
+  margin-bottom: 3px;
+  margin-right: 30px;
+}
+#share i {
+  color: #fff;
+}
+.pocket {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  padding-left: 10px;
+  margin-top: 3px;
+  margin-bottom: 3px;
+  background: #E82545;
 }
   ';
 if(!isset($_GET['original'])){

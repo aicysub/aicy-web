@@ -181,7 +181,8 @@ div,p,a,i,.navbar,.contents,li,ul,input,select,textarea,button {
 }
 
 .top,
-.top:hover {
+.top:hover,
+#share {
   transition: bottom .3s ease;
 }
 

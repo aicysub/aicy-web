@@ -325,6 +325,9 @@ display: none !important;
 .news-messeage {
   width: 100%;
 }
+.tools {
+  display: grid;
+}
   ';
   if(!isset($_GET['original'])){
     $copyright = '/* Copyright (c) 2022 AIC_Group. */

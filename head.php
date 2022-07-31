@@ -145,6 +145,14 @@ header_register_callback(function(){
 </div></a>
 <?php require_once("/hdd/aic/input.php"); ?>
       </nav>
+      <div id="share">
+            <a href="https://twitter.com/intent/tweet?text=＜文字を入力してください＞%0A%0A%23あいしぃー%0A@AIC_6301%0A&url=https://aic-group.sytes.net<?php echo $url;?>" class="twitter" target="_blank">
+            <i class="fa-brands fa-twitter"></i>
+          </a>
+          <a href="https://getpocket.com/edit?url=https://aic-group.sytes.net<?php echo $url;?>" class="pocket" target="_blank">
+          <i class="fa-brands fa-get-pocket"></i>
+          </a>
+</div>
       <footer class="footers">
 <h2 class="title" style="text-align: center; padding-bottom: 10px; color: #FFF; text-shadow: 1px 1px 0 #906862, -1px -1px 0 #906862, -1px 1px 0 #906862, 1px -1px 0 #906862, 0px 1px 0 #906862, 0-1px 0 #906862, -1px 0 0 #906862, 1px 0 0 #906862;width: 100%;font-size: 1.5em;"><a href="/license/" style="color:#fff;"><i class="fa-solid fa-copyright left"></i>AIC_Group. / <img src="/favicon.ico" width="30"> <?php echo date('Y'); ?></a></h2><p style="text-align:center;"><span style="font-size: 13px;"><a href="https://twemoji.twitter.com/" target="_blank">Twemoji”</a> by Copyright <?php echo date('Y'); ?> <a href="https://about.twitter.com/" target="_blank">Twitter, Inc</a> and other <a href="https://github.com/twitter/twemoji/graphs/contributors/" target="_blank">contributors</a> is licensed under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC-BY 4.0</a></span</p>
       </footer>
