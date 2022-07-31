@@ -2,9 +2,12 @@
 header( 'Cache-Control: no-store, no-cache, must-revalidate' );
 header( 'Cache-Control: post-check=0, pre-check=0', FALSE );
 header('Pragma:no-cache');
+header_register_callback(function(){
+  header_remove('X-Powered-By');
+});
 $original_css = '
 div,p,a,i,.navbar,.contents,li,ul,input,select,textarea,button {
-  transition-duration: 0.2s;
+  transition-duration: .3s;
   transition-timing-function: ease;
   transition-property: color, transform, background-color, display, div, position, span, font-size, text-decoration, box-shadow, border-color, filter, border-radius, background-image, transform, margin, margin-top, margin-bottom, margin-right, margin-left, padding-bottom, outline;
 }
@@ -179,14 +182,14 @@ div,p,a,i,.navbar,.contents,li,ul,input,select,textarea,button {
 
 .top,
 .top:hover {
-  transition: bottom .6s ease;
+  transition: bottom .3s ease;
 }
 
 .navbar,
 .bread,
 .fixed,
 .toc-fixed {
-  transition-duration: 1s;
+  transition-duration: .3s;
   transition-timing-function: ease;
   transition-property: top,bottom;
 }

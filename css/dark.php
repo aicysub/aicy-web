@@ -2,6 +2,9 @@
 header( 'Cache-Control: no-store, no-cache, must-revalidate' );
 header( 'Cache-Control: post-check=0, pre-check=0', FALSE );
 header('Pragma:no-cache');
+header_register_callback(function(){
+  header_remove('X-Powered-By');
+});
 $original_css = ':root {
    --main-text: #CDCDCD;
    --background-secondary: #26292B;
@@ -14,7 +17,6 @@ $original_css = ':root {
    --nav-focus: #343435;
    --modal: #222224;
    --site-background: #222224;
-   --nav-background: #26292b7a;
    --button-background: #515254;
    --shadow: rgba(0, 0, 0, 0.56) 0px 1.6px 3.6px 0px, rgba(0, 0, 0, 0.56) 0px 0.3px 0.9px 0px;
 }
@@ -163,10 +165,7 @@ $original_css = ':root {
  .fas,
  .fa-brands,
  .fab {
-   -moz-text-shadow: 1px 2px 0px rgba(0, 0, 0, 1);
-   -webkit-text-shadow: 1px 2px 0px rgba(0, 0, 0, 1);
-   -ms-text-shadow: 1px 2px 0px rgba(0, 0, 0, 1);
-   text-shadow: 1px 2px 0px rgba(0, 0, 0, 1);
+  text-shadow: rgba(0, 0, 0, 0.25) 2px 4px 0px;
  }
  
  @media screen and (max-width:480px) {
@@ -194,6 +193,9 @@ $original_css = ':root {
  .preference-modal {
    box-shadow: rgb(0, 0, 0) 0px 22px 70px 4px;
  }
+ .card-tools svg {
+  filter: drop-shadow(rgba(0, 0, 0, 0.25) 2px 4px 0px);
+}
 ';
 if(!isset($_GET['original'])){
   $copyright = '/* Copyright (c) 2022 AIC_Group. */

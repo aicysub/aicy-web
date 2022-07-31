@@ -16,16 +16,8 @@ $word_view = "「".$_GET["q"]."」の検索結果";
 <br>
 <title><?php echo $word_view; ?> - あいしぃーのさーばー</title>
 <h2 class="h2 title fixed"><?php echo $word_view; ?></h2>
+<div id="ads"></div>
 <br>
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-7768523920396309"
-     data-ad-slot="2076535555"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
             <?php foreach ($stmt as $row): ?>
                                                     <div class="search">
                  <?php $counter++; ?>                                  
@@ -37,7 +29,7 @@ $word_view = "「".$_GET["q"]."」の検索結果";
            echo '<div class="box">見つかりませんでした…</div>';
             }
             ?>
-           <br> <p style="text-align:right;margin-right: 22%;font-size: 1.2em;"><?php echo $counter ?> 件見つかりました。</p><br><br>
+           <br> <p style="text-align:right;margin-right: 16%;font-size: 1.2em;position: absolute;top: 25%;right: 0;"><?php echo $counter ?> 件見つかりました。</p><br><br>
            <script>
 $(function(){
   $('[name=search]').val(('<?php echo $_GET["q"];?>'));

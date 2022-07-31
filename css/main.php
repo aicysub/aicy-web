@@ -2,6 +2,9 @@
 header( 'Cache-Control: no-store, no-cache, must-revalidate' );
 header( 'Cache-Control: post-check=0, pre-check=0', FALSE );
 header('Pragma:no-cache');
+header_register_callback(function(){
+  header_remove('X-Powered-By');
+});
 $original_css = '
 * {
   scrollbar-width: auto;
@@ -24,7 +27,7 @@ p,span,h1,h2,h3,h4,h5,h6,a,b,i {
 :root {
   --main-text: #272727;
   --shadow: rgba(0, 0, 0, 0.133) 0px 1.6px 3.6px 0px, rgba(0, 0, 0, 0.11) 0px 0.3px 0.9px 0px;
-  --hover-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.04), -10px 0 20px 0px rgba(0, 0, 0, 0.04);
+  --hover-shadow: rgba(0, 0, 0, 0.5) 0px 4px 40px;
   --background-secondary: #F5F5F6;
   --focus: rgba(3, 102, 214, 0.3);
   --border: 2px solid #BDBDBD;
@@ -36,7 +39,7 @@ p,span,h1,h2,h3,h4,h5,h6,a,b,i {
   --accent: #A06A54;
   --modal: #EFEFEF;
   --site-background: #F6F6F6;
-  --nav-background: #F5F5F68c;
+  --nav-background: var(--background-primary);
   --button-background: #FFF;
 }
 *::selection {
@@ -162,7 +165,6 @@ a {
   top: 0px;
   position: sticky;
   background: var(--nav-background);
-  backdrop-filter: saturate(180%) blur(20px);
   border-bottom: var(--border);
   box-shadow: var(--shadow);
 }
@@ -269,10 +271,7 @@ button.is-primary.is-hovered,
 .fab,
 .fa-duotone {
   margin-right: 8px;
-  -moz-text-shadow: 1px 2px 0px rgba(190, 190, 190, 1);
-  -webkit-text-shadow: 1px 2px 0px rgba(190, 190, 190, 1);
-  -ms-text-shadow: 1px 2px 0px rgba(190, 190, 190, 1);
-  text-shadow: 1px 2px 0px rgba(190, 190, 190, 1);
+  text-shadow: 2px 4px 0 rgba(0,0,0,.25);
 }
 
 .navbar-dropdown .navbar-item {
@@ -515,13 +514,8 @@ a {
   padding-bottom: 30px;
   animation: up 1.5s ease;
   color: var(--main-text);
+  box-shadow: var(--shadow);
 }
-
-.box:hover {
-  background: var(--background-secondary);
-  box-shadow: var(--hover-shadow);
-}
-
 .contents a[href^="/"]::after {
   content: "\f054";
   width: 16px;
@@ -533,14 +527,14 @@ a {
   margin-right: 1%;
   font-size: 15px;
   position: relative;
-  top: -7px;
+  top: -8%;
 }
 .contents a[href^="/"]:hover:after {
   transform: translateX(10px);
   margin-right: 5px;
   color: var(--focus);
   font-size: 18px;
-  top: -5px;
+  top: -9%;
 }
 .contents a[href^="#"]::after {
   content: "\f078";
@@ -967,7 +961,6 @@ button:focus {
   padding: 0;
   list-style: none;
   background: var(--nav-background);
-  backdrop-filter: saturate(180%) blur(20px);
   padding-top: 20px;
   padding-bottom: 24px;
   padding-left: 30px;
@@ -988,7 +981,6 @@ button:focus {
   background: var(--nav-background);
   z-index: 500;
   user-select: none;
-  backdrop-filter: saturate(180%) blur(20px);
   padding-top: 10px;
   padding-bottom: 10px;
 }
@@ -1495,7 +1487,6 @@ span {
   width: 4.2%;
   font-size: 5em;
   background-color: rgba(178, 121, 84, 0.58);
-  backdrop-filter: saturate(180%) blur(20px);
   box-shadow: var(--shadow);
 }
 
@@ -1526,13 +1517,11 @@ span {
 
 .video-js .vjs-control-bar {
   background-color: rgba(178, 121, 84, 0.22);
-  backdrop-filter: saturate(180%) blur(20px);
 }
 
 .video-js .vjs-slider {
   background-color: transparent height: 1.25em;
   border-radius: 18px;
-  backdrop-filter: saturate(180%) blur(20px);
 }
 
 .video-js .vjs-progress-holder {
@@ -1697,7 +1686,6 @@ rt {
   font-size: 1.8em;
   border-radius: 18px;
   cursor: pointer;
-  backdrop-filter: saturate(180%) blur(20px);
   user-select: none;
   animation-name: click-show-anime;
   animation-timing-function: ease-in-out;
@@ -1882,9 +1870,9 @@ label {
   position: fixed;
   top: 70px;
   left: 0;
-  backdrop-filter: blur(20px);
   display: none;
   z-index: 500;
+  backdrop-filter: blur(4px);
 }
 
 .fadeout {
@@ -2273,6 +2261,58 @@ font-size: 18px;
 .box .adsbygoogle {
   width: auto;
   background: var(--background-primary);
+}
+.center {
+text-align: center;
+}
+.card-tools {
+  background: var(--background-primary);
+  border-radius: 1em;
+  padding-top: 1.5em;
+  padding-bottom: 1em;
+  box-shadow: var(--shadow);
+  outline: var(--border);
+  color: var(--main-text);
+  width: 330px;
+  text-align: center;
+  margin: 1em;
+}
+.card-tools:hover {
+  color: var(--main-text);
+  text-decoration: none !important;
+  transform: translateY(-10px) !important;
+  box-shadow: var(--hover-shadow);
+  background: var(--nav-focus);
+}
+.card-tools:active {
+  transform: none !important;
+}
+.tools a[href^="/"]::after  {
+display: none;
+}
+.card-tools hr {
+  margin-left: 1em;
+  margin-right: 1em;
+  width: 90%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.card-tools svg {
+width: 7em;
+height: 6em;
+margin-left: 2em;
+margin-right: 2em;
+text-align: center;
+fill: var(--accent);
+filter: drop-shadow(2px 4px 0 rgba(0,0,0,.25));
+}
+.tools {
+  display: flex;
+  justify-content: center;
+}
+.card-tools .card-word {
+  font-size: 80%;
+  margin-top: 10px;
 }
   ';
 if(!isset($_GET['original'])){
